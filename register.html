@@ -37,6 +37,7 @@
 
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 
 
@@ -321,90 +322,11 @@ p {
     <body class="">
         
 
-        <nav class="navbar navbar-light navbar-expand fixed-top">
-            <div class="container">
-                
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                        <span class="navbar-brand ib-logo-white"></span>
-                        <div class="ibkr-app-type d-none" data-account-function="">
-                            <span class="ibkr-lite-styled d-none">ibkr<span> lite</span></span>
-                            <span class="ibkr-pro-styled d-none">ibkr<span> pro</span></span>
-                        </div>
-                    
-                
-                <div id="ibkr-nav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto align-items-center">
-                        
-                            <li class="nav-item nav-help">
-                                <a class="nav-link" href="javascript:void(0);" onclick="getHelp();">
-                                    <span class="notification hidden"></span>
-                                    <i class="fas fa-headset"></i>
-                                </a>
-                            </li>
-                        
-                        
-                            <li class="nav-item dropdown">
-                                <a id="applicationDisplayLanguage" href="javascript:void(0);" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe-americas"></i><span id="currentLanguage">English</span></a><div id="languageList" class="dropdown-menu pull-right" aria-labelledby="applicationDisplayLanguage"><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-lang="en_US" class="dropdown-item active">English</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-lang="fr_FR" class="dropdown-item">Français</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-lang="de_DE" class="dropdown-item">Deutsch</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-lang="es_ES" class="dropdown-item">Español</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-lang="hu_HU" class="dropdown-item">Magyar</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-lang="ru_RU" class="dropdown-item">Русский</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-lang="it_IT" class="dropdown-item">Italiano</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-lang="zh_CN" class="dropdown-item">简体中文</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-lang="zh_TW" class="dropdown-item">繁體中文</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-lang="ja_JP" class="dropdown-item">日本語</a></div>
-                            </li>
-                        
-                        <li class="nav-item dropdown d-none" data-account-function="">
-                            <a id="userMenu" href="javascript:void(0);" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-user"></i>
-                                <span data-account-identifier=""></span>
-                            </a>
-                            <div class="dropdown-menu pull-right menu-user" aria-labelledby="userMenu">
-                                <a class="dropdown-item active d-block d-md-none" href="javascript:void(0);">
-                                    <span data-account-identifier=""></span>
-                                </a>
-                                <div class="btn-logout">
-                                    <a href="javascript:void(0);" onclick="logout();" class="btn btn-primary">
-                                        <span data-logout="">Logout</span>
-                                    </a>
-                                </div>
-                                
-                                
-                                
-                                
-                                
-                                
-                                <a class="dropdown-item" href="javascript:void(0);" onclick="showApplicationModal({&#39;title&#39; : $(&#39;span[data-cancel-application]&#39;).text(), &#39;servlet&#39; : getApplicationMainURL(), &#39;parameters&#39; : {&#39;action&#39; : &#39;utility&#39;, &#39;cmd&#39; : &#39;cancelApplication&#39;}});">
-                                    <span data-cancel-application="">Cancel Application</span>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        
+      
 
 
 
 
-
-
-
-
-
-    
-        
-    
-    
-    
-
-
-
-    
-    
-    
-        
     
 
 
@@ -567,28 +489,6 @@ p {
 
 
 
-
-
-
-
-
-
-    
-        
-    
-    
-    
-
-
-
-    
-    
-    
-        
-    
-
-
-
 <section id="offerWarning" class="pb-0" style="display: none;">
     <div class="container">
         <div class="row">
@@ -598,7 +498,7 @@ p {
                         <i class="fa fa-exclamation-triangle fa-3x"></i>
                     </p>
                     <p>
-                        This account is ineligible to enroll in IBKR Lite because it does not meet the enrollment guidelines. To become eligible, return to the previous page and edit your application.
+                        This account is ineligible to enroll in CapitaStocks Lite because it does not meet the enrollment guidelines. To become eligible, return to the previous page and edit your application.
                     </p>
                     <div id="offerWarningExplain"></div>
                 </div>
@@ -799,13 +699,7 @@ p {
                     
                 
                 
-                    <div class="mb-10">
-                        <h5>Do you want to continue a previously started application?&nbsp;<a href="https://gdcdyn.interactivebrokers.com/sso/Login?c=t" target="_blank">Click Here&nbsp;<i class="fas fa-chevron-right"></i></a></h5>
-                    </div>
-                    
-                        <div>
-                            <h5>Are you an IBKR Client looking to open an additional account?&nbsp;<a href="https://gdcdyn.interactivebrokers.com/sso/Login?action=AccountSettings&amp;config=AdditionalAccount" target="_blank">Click Here&nbsp;<i class="fas fa-chevron-right"></i></a></h5>
-                        </div>
+                  
                     
                 
             </div>
