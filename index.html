@@ -1152,6 +1152,83 @@ $(function() {
 	font-size: 0.85em;
 	margin-left: 6px;
 }
+
+
+
+.card {
+    background: #fff;
+    color: #333;
+    margin: 0em auto;
+    /* min-height: 30rem; */
+    border-radius: 2rem;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-55%);
+}
+.hero .img {
+    filter: drop-shadow(0rem 1.5rem rgba(0,0,0,0.1));
+    transition: 0.3s ease-out;
+}
+.card:hover .img {
+    filter: drop-shadow(0rem 2.5rem rgba(0,0,0,0.1));
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.acc-container {
+    padding: 2rem 1rem;
+}
+.acc-btn {
+    width: 100%;
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background: inherit;
+    border: none;
+    outline: none;
+    text-align: left;
+    transition: all 0.5s linear;
+}
+.acc-btn:after {
+    content: "\27A4";
+    color: #fa8d0c;
+    float: right;
+    transition: all 0.3s linear;
+}
+.acc-btn.is-open:after {
+    transform: rotate(90deg);
+}
+.acc-btn:hover, .acc-btn.is-open {
+    color: #000;
+    font-weight: bold;
+}
+
+.acc-content {
+    max-height: 0;
+    color: rgba(0,0,0,0.75);
+    font-size: 1.5rem;
+    margin: 0 2rem;
+    padding-left: 1rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    border-bottom: 1px solid #ccc;
+}
+
+.credit {
+    text-align: center;
+    padding: 1rem;
+}
+.credit a {
+    text-decoration: wavy underline;
+    color: dodgerblue;
+}
 </style>
 <span class="drop-link"><span id="trading-technology"></span></span>
 <section id="trading-technology-section">
@@ -1161,25 +1238,89 @@ $(function() {
 					<img class="lazy" data-src="./Home _ Interactive Brokers LLC_files/home-tech-full.jpg" alt="Premier Technology">
 				</div>
 				<div class="col-12 col-lg-6">
-					<h2 class="padding-bottom-20">Leverage Technology Built to Help You <span class="d-none d-md-inline d-lg-none"><br></span>Get Ahead </h2>
+					<h2 class="padding-bottom-20">Still have  questions? <span class="d-none d-md-inline d-lg-none"><br></span> </h2>
 					<div class="row">
-												<div class="col-12 col-md-6">
-							<p class="text-bold text-home-red"><a href="#" target="_self">Trading Platforms<i class="fas fa-chevron-right right-chev"></i></a></p>
-							<p>Powerful enough for the professional trader but designed for everyone. Available on desktop, mobile and web.</p>
-						</div>
-																		
-						<div class="col-12 col-md-6">
-							<p class="text-bold text-home-red"><a href="#" target="_self">Free Trading Tools<i class="fas fa-chevron-right right-chev"></i></a></p>
-							<p>Spot market opportunities, analyze results, manage your account and make better decisions with our free trading tools.</p>
-						</div>
-						<div class="col-12 col-md-6">
-							<p class="text-bold text-home-red"><a href="#" target="_self">Order Types and Algos<i class="fas fa-chevron-right right-chev"></i></a></p>
-							<p>100+ order types – from limit orders to complex algorithmic trading – help you execute any trading strategy.</p>
-						</div>
-						<div class="col-12 col-md-6">
-							<p class="text-bold text-home-red"><a href="#" target="_self">Comprehensive Reporting<i class="fas fa-chevron-right right-chev"></i></a></p>
-							<p>Real-time trade confirmations, margin details, transaction cost analysis, sophisticated portfolio analysis and more.</p>
-						</div>
+						<main class="card">
+					
+						  
+							<div class="acc-container">
+						  
+							  <button class="acc-btn">What is CapitaStocks?</button>
+							  <div class="acc-content">
+								<p>
+									CapitaStocks is a San Francisco fintech company that through its United States Money Services Business and SEC registered broker-dealer provides fast, easy  and secure access to the US stock market and cryptocurrencies.
+
+									CapitaStocks’s mobile app lets people in over 170 countries invest in United States dollars, stocks, ETFs, and REITs using their local currency and transfer methods or cryptocurrency.
+									‍
+									CapitaStocks is the brand name of Panchain, Inc. CapitaStocks Securities LLC and CapitaStocks Financial LLC are fully-owned subsidiaries of Panchain, Inc.
+								</p>
+							  </div>
+						  
+							  <button class="acc-btn">
+								is CapitaStocks Registered?
+							  </button>
+							  <div class="acc-content">
+								<p>
+									CapitaStocks Securities is a United States SEC registered broker-dealer, and a member of both the Financial Industry Regulatory Authority (FINRA) and the Securities Investor Protection Corporation (SIPC), which protects securities customers of its members up to US$500,000 (including US$250,000 for claims for cash). Explanatory brochure available upon request or at www.sipc.org For more information on CapitaStocks, you can find us on FINRA Broker Check.
+								</p>
+							  </div>
+						  
+							  <button class="acc-btn">
+								is CapitaStock secure
+							  </button>
+							  <div class="acc-content">
+								<p>
+									CapitaStock strives to implement industry standard security measures. Your password is never stored in plaintext - it is hashed using the industry-standard BCrypt hashing algorithm. Sensitive and private information such as your social security number are encrypted before they’re written to disk. All of our apps, websites, and servers securely communicate using the Transport Layer Security (TLS) protocol. For account login we require multi-factor authentication. Our mobile app supports TouchID, FaceID, or a custom pin code for unlocking.
+								</p>
+							  </div>
+						  
+							  <button class="acc-btn">
+								Why invest in america?
+							  </button>
+							  <div class="acc-content">
+								<p style="font-size: 0.5rem;">
+									<h6>Here are some reasons for you to start investing in the US stock market:</h6>
+						
+
+									The US is home to some of the most famous companies in the world, such as Apple, Amazon and Google;
+									The US stock market has an average annual return of 10% since 1926 over the S&P 500 index (source).
+									Past performance does not guarantee future results.
+									The US stock market is the most liquid in the world, with more than 30 trillion dollars in capitalization and 30 trillion dollars in trading volume (source).
+									More than 250 foreign companies such as XP, Inc. and Alibaba from 34 countries around the world trade in the US. market so you can have a global portfolio (source).
+									Own investments in US dollars, the most widely used currency in the world.
+								</p>
+							  </div>
+						  
+							  <button class="acc-btn">
+								What do i need to create my account?
+							  </button>
+							  <div class="acc-content">
+								<p>
+									To start investing in the US market with CapitaStocks, <a href="register.html">click here</a>  to sign up.
+									‍
+									To create a CapitaStocks account, you just need to be at least 18 years old and submit some basic information.
+									
+									After submitting your information through the web app, your application will typically be reviewed and approved within one business day.
+									
+									If any additional information is required pending, we'll get in touch by email.
+								</p>
+							  </div>
+						  
+							  <button class="acc-btn">
+								What are the fee charges?
+							  </button>
+							  <div class="acc-content">
+								<p>
+									CapitaStocks charges no commission fees. We make money from other sources such as interest on your uninvested cash and payment for order flow.
+								</p>
+							  </div>
+						  
+							 
+							
+						  
+							</div>
+						  </main>
+						
 					</div>
 				</div>
 			</div>
@@ -1583,6 +1724,36 @@ login.addEventListener("click", function() { setCookie("IB_LGN", "T", 365); });
 portal.addEventListener("click", function() { setCookie("IB_LGN", "T", 365); });
 </script><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./Home _ Interactive Brokers LLC_files/activityi.html"></iframe>
 
+
+<script>
+	const btns = document.querySelectorAll(".acc-btn");
+
+// fn
+function accordion() {
+  // this = the btn | icon & bg changed
+  this.classList.toggle("is-open");
+
+  // the acc-content
+  const content = this.nextElementSibling;
+
+  // IF open, close | else open
+  if (content.style.maxHeight) content.style.maxHeight = null;
+  else content.style.maxHeight = content.scrollHeight + "px";
+}
+
+// event
+btns.forEach((el) => el.addEventListener("click", accordion));
+
+/*
+   
+       Jokes are from > 
+        https://chartcons.com/100-funny-trick-questions-answers/
+        Background image from > 
+        https://www.magicpattern.design/tools/css-backgrounds
+   
+*/
+
+</script>
 
 <script type="text/javascript" id="">!function(b,c,d,a){b.twq||(a=b.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1",a.queue=[],t=c.createElement(d),t.async=!0,t.src="//static.ads-twitter.com/uwt.js",s=c.getElementsByTagName(d)[0],s.parentNode.insertBefore(t,s))}(window,document,"script");twq("init","nv5q1");twq("track","PageView");</script>
 
