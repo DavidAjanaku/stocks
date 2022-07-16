@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://www.interactivebrokers.com/en/general/about/about.php -->
+<html lang="en" class="zeynep-initialized"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>About the Interactive Brokers Group | Interactive Brokers LLC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta name="description" content="Information, History and Mission Statement for Interactive Brokers LLC">
+<meta name="keywords" content="Timberhill, IB, Interactivebrokers, Interactive Brokers, About ib, Company Info, History, mission statement, Interactive Brokers history">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="expires" content="-1">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<!--Pid:564-->
+<link rel="canonical" href="https://www.interactivebrokers.com/en/general/about/about.php">
+<meta name="apple-mobile-web-app-title" content="IBKR">
+<link rel="icon" sizes="192x192" href="https://www.interactivebrokers.com/images/web/favicons/home-screen-icon-192x192.png">
+<link rel="icon" sizes="128x128" href="https://www.interactivebrokers.com/images/web/favicons/home-screen-icon-128x128.png">
+<link rel="apple-touch-icon" sizes="57x57" href="https://www.interactivebrokers.com/images/web/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://www.interactivebrokers.com/images/web/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://www.interactivebrokers.com/images/web/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://www.interactivebrokers.com/images/web/favicons/apple-touch-icon-144x144.png">
+<!-- SCRIPTS HEAD ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" async="" src="./Home _ Interactive Brokers LLC_files/config.js.download"></script><script type="text/javascript" async="" src="./Home _ Interactive Brokers LLC_files/events.js.download"></script><script src="./Home _ Interactive Brokers LLC_files/ytc.js.download" async=""></script><script src="./Home _ Interactive Brokers LLC_files/917285591680749" async=""></script><script async="" src="./Home _ Interactive Brokers LLC_files/fbevents.js.download"></script><script async="" src="./Home _ Interactive Brokers LLC_files/uwt.js.download"></script><script type="text/javascript" async="" src="./Home _ Interactive Brokers LLC_files/pixel.js.download"></script><script type="text/javascript" async="" src="./Home _ Interactive Brokers LLC_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Home _ Interactive Brokers LLC_files/bat.js.download"></script><script type="text/javascript" async="" src="./Home _ Interactive Brokers LLC_files/insight.min.js.download"></script><script type="text/javascript" async="" src="./Home _ Interactive Brokers LLC_files/f.txt"></script><script type="text/javascript" async="" src="./Home _ Interactive Brokers LLC_files/js"></script><script async="" src="./Home _ Interactive Brokers LLC_files/gtm.js.download"></script><script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/jquery.min.js.download"></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  element.src = data.source;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+createScriptElement({ source : "/scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "/scripts/common/js/lib.js?ver=9" });
+function bsLoaded() {
+  createScriptElement({ source : "/scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/zeynep-2.2.0/zeynep.js?ver=1", loadfunction: uiLoaded });
+}
+function uiLoaded() {
+  createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2", loadfunction: twsUtils });
+  createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
+}
+
+function twsUtils()
+{
+ showHideBeta();
+}
+</script><script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/bootstrap.bundle.min.js.download"></script><script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/lib.js.download"></script>
+<script type="text/javascript">
+$(function() {
+ if (document.cookie.indexOf("IB_SEARCH") == -1)
+ {
+  var ex=new Date();
+  ex.setTime(ex.getTime()+86400000);
+  document.cookie ='IB_SEARCH='+Math.floor(new Date().getTime()/1000)+';expires='+ex.toGMTString()+';path=/;domain=.interactivebrokers.com';
+ }
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("/");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.com');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.com');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 7, '.interactivebrokers.com');
+ });
+});
+</script>
+<script>var e=document.createElement("script");e.type='text/javascript';e.src='/scripts/common/js/ibtrk.js?v=14';document.head.appendChild(e);_ibp=564;</script><script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/ibtrk.js.download"></script>
+<!-- STYLES HEAD -->
+<link rel="preload" href="./Home _ Interactive Brokers LLC_files/bootstrap.min.css" as="style">
+<link rel="stylesheet" href="./Home _ Interactive Brokers LLC_files/bootstrap.min.css" type="text/css" media="all">
+<link rel="preload" href="./Home _ Interactive Brokers LLC_files/bootstrap-migration.min.css" as="style">
+<link rel="stylesheet" href="./Home _ Interactive Brokers LLC_files/bootstrap-migration.min.css" type="text/css" media="all">
+<link rel="preload" href="./Home _ Interactive Brokers LLC_files/ibkr-website.css" as="style">
+<link rel="stylesheet" href="./Home _ Interactive Brokers LLC_files/ibkr-website.css" type="text/css" media="all">
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-b89e0da6-3912-4090-98c4-94efbec7dd66","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="CGJ34-S5RKA-7ZQ8F-AJER9-TWWVG",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"CGJ34-S5RKA-7ZQ8F-AJER9-TWWVG";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="cookiepresent",a="mzmswl24pkngaywsklaq-f-b053666a9-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"32","ak.cp":"1131468","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":174,"ak.ipv":4,"ak.proto":"h2","ak.rid":"f0d19e5","ak.r":31153,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"102.89.43.0","ak.cport":63042,"ak.gh":"92.122.154.92","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1657950913","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==Lsv1EI/Xp20kmvzIuGo4LTpvVjMzigYY9WVtzIXc3K08uDuf4xnKAhWvemdrC+cu5GlyZ4ZLOXPvFR0+UiosWAUPUyeb8Hxv6oFgMU54ywsTV1qTNspaTx6fGDsHPhWkVlMNc3I3pX8ulso+p/yxYoMnyquP+cpawrBkTBO/FndjhflbY/uBma6G7E86AW/dOTBIjp5DENzEWlaiUAXMjhiUnr4AojsR0xGJlwFzlc0LPR2NFptf9wXx3UhJuB8Ty2rRuchKgJr7ZhoMIXxegfwAk9IynrToEDFweRuy52RW7tPaUU+tKZcPwmmd8sqLQmdn2gz1jBvmJ8ZmC7L2dg65by1ov19ZTzbRLczvTXYQfNUhk+Ik1D50H/iRBH0eFtfWe73ZgCVA1lbHA47TsE2yq+g3fQw9SZ5+zt4BHxI=","ak.pv":"219","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script><link href="./Home _ Interactive Brokers LLC_files/CGJ34-S5RKA-7ZQ8F-AJER9-TWWVG" rel="preload" as="script"><script id="boomr-scr-as" src="./Home _ Interactive Brokers LLC_files/CGJ34-S5RKA-7ZQ8F-AJER9-TWWVG" async=""></script><meta http-equiv="origin-trial" content="A9wkrvp9y21k30U9lU7MJMjBj4USjLrGwV+Z8zO3J3ZBH139DOnCv3XLK2Ii40S94HG1SZ/Zeg2GSHOD3wlWngYAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="./Home _ Interactive Brokers LLC_files/ibgtag.js.download" id="_ib_tag" async=""></script><script type="text/javascript" async="" src="./Home _ Interactive Brokers LLC_files/f(1).txt"></script><script src="./Home _ Interactive Brokers LLC_files/4075949.js.download" type="text/javascript" async="" data-ueto="ueto_d51e919946"></script><script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/appear.min.js.download"></script><script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/easing.min.js.download"></script><script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/parallax.min.js.download"></script><script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/uitotop.min.js.download"></script><script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/zeynep.js.download"></script><script charset="utf-8" src="./Home _ Interactive Brokers LLC_files/identify.js.download"></script><script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/twsUtils.js.download"></script><script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/design.js.download"></script></head>
+<body>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NK9NSD');</script>
+<!-- End Google Tag Manager --><div id="printheader"></div>
+<!-- HEADER START ----------------------------------------------------------------------------------------------------  -->
+<div class="ibkr-header" id="ibkr-header">
+    <!-- BANNER BAND-AID ----------------------------------------------------------------------------------------------------  -->
+
+    <!-- NAV TOP START (LG/XL ONLY) ----------------------------------------------------------------------------------------------------  -->
+<nav class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block">
+    <div class="container">
+        <div class="navbar-collapse collapse" id="ibkr-nav-top">
+            <!-- LEFT MENU ----------------------------------------------------------------------------------------------------  -->
+            <ul class="navbar-nav mr-auto align-items-center">
+                <!-- FOR INDIVIDUALS -->
+                <li class="nav-item dropdown"><a href="https://www.interactivebrokers.com/en/home.php#" target="_self" class="nav-link dropdown-toggle" id="nav-for-individuals" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">For Individuals</a>
+                    <div class="dropdown-menu dropdown-ind-accounts" aria-labelledby="nav-for-individuals">
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://www.interactivebrokers.com/en/accounts/individual.php" target="_self" class="dropdown-item">Individual, Joint or IRA</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/family-advisor.php" target="_self" class="dropdown-item">Family Advisors</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/non-professional-advisor.php" target="_self" class="dropdown-item">Non-Professional Advisors</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- FOR INSTITUTIONS -->
+                <li class="nav-item dropdown"><a href="https://www.interactivebrokers.com/en/home.php#" target="_self" class="nav-link dropdown-toggle" id="nav-for-institutions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">For Institutions</a>
+                    <div class="dropdown-menu dropdown-inst-accounts" aria-labelledby="nav-for-institutions">
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://www.interactivebrokers.com/en/accounts/institutions.php" target="_self" class="dropdown-item">Institutions Home</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/advisor.php" target="_self" class="dropdown-item">Registered Investment Advisors</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/proprietary-trading-group.php" target="_self" class="dropdown-item">Prop Traders</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/hedge-fund.php" target="_self" class="dropdown-item">Hedge Funds</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/broker.php" target="_self" class="dropdown-item">Introducing Brokers</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/family-office.php" target="_self" class="dropdown-item">Family Offices</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/compliance-officer.php" target="_self" class="dropdown-item">Compliance Officers</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/small-business.php" target="_self" class="dropdown-item">Small Businesses</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/money-manager.php" target="_self" class="dropdown-item">Money Managers</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/administrator.php" target="_self" class="dropdown-item">Fund Administrators</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/hedge-fund-allocator.php" target="_self" class="dropdown-item">Hedge Fund Allocators</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/educator.php" target="_self" class="dropdown-item">Educators</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!-- RIGHT MENU ----------------------------------------------------------------------------------------------------  -->
+            <ul class="navbar-nav ml-auto align-items-center">
+                <!-- FREE TRIAL -->
+                <li class="nav-item"><a href="https://www.interactivebrokers.com/en/trading/free-trial.php" target="_self" class="nav-link">FREE TRIAL</a></li>
+                <!-- CAREERS -->
+                <li class="nav-item"><a href="https://www.interactivebrokers.com/en/general/about/careers-splash.php" target="_self" class="nav-link">Careers</a></li>
+                <!-- ABOUT US -->
+                <li class="nav-item dropdown"><a href="https://www.interactivebrokers.com/en/home.php#" class="nav-link dropdown-toggle" id="nav-about-us" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+                    <div class="dropdown-menu dropdown-about-us" aria-labelledby="nav-about-us">
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://www.interactivebrokers.com/en/general/about/about.php" target="_self" class="dropdown-item">Information and History</a>
+                                <a href="https://www.interactivebrokers.com/en/general/awards.php" target="_self" class="dropdown-item">Awards</a>
+                                <a href="https://www.interactivebrokers.com/en/index.php?f=news" target="_self" class="dropdown-item">News @ IBKR</a>
+                                <a href="https://www.interactivebrokers.com/en/index.php?f=media" target="_self" class="dropdown-item">Press and Media</a>
+                                <a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" class="dropdown-item" rel="noreferrer noopener">Investor Relations</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/legalDocuments/brokerPerformanceReports.php" target="_self" class="dropdown-item">Regulatory Reports</a>
+                                <a href="https://www.interactivebrokers.com/en/accounts/referrer.php" target="_self" class="dropdown-item">Refer a Friend</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- SUPPORT -->
+                <li class="nav-item dropdown"><a href="https://www.interactivebrokers.com/en/home.php#" class="nav-link dropdown-toggle" id="nav-support" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                    <div class="dropdown-menu dropdown-contact-us" aria-labelledby="nav-support">
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://www.interactivebrokers.com/en/support/fund-my-account.php" target="_self" class="dropdown-item">Fund Your Account</a>
+                                <a href="https://www.interactivebrokers.com/en/support/individuals.php" target="_self" class="dropdown-item">For Individuals</a>
+                                <a href="https://www.interactivebrokers.com/en/support/institutions.php" target="_self" class="dropdown-item">For Institutions</a>
+                                <a href="https://www.interactivebrokers.com/en/index.php?f=salesinfo" target="_self" class="dropdown-item">Institutional Sales Contacts</a>
+                                <a href="https://www.interactivebrokers.com/en/general/contact/ibot-container.php" target="_self" class="dropdown-item">Browse Our FAQs</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- LANGUAGE SELECTOR -->
+                <li class="nav-item dropdown"><a href="https://www.interactivebrokers.com/en/home.php#" class="nav-link nav-language dropdown-toggle" id="nav-language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Language</span><img src="./Home _ Interactive Brokers LLC_files/icon-language.svg" alt="Language" border="0"></a>
+                    <div class="dropdown-menu dropdown-language" aria-labelledby="nav-language">
+                        <div class="row">
+                            <div class="col" id="langselector">
+                                <a href="https://www.interactivebrokers.com/en/home.php" class="dropdown-item">English</a>
+                                <a href="https://www.interactivebrokers.com/cn/home.php" target="_self" class="dropdown-item">中文简体</a>
+                                <a href="https://www.interactivebrokers.com/cn/home.php" target="_self" class="dropdown-item">中文繁體</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- NAV TOP END ----------------------------------------------------------------------------------------------------  -->
+<!-- NAV BOTTOM START ----------------------------------------------------------------------------------------------------  -->
+<nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+    <div class="container">
+        <!-- IB LOGO -->
+                    <a href="https://www.interactivebrokers.com/en/home.php" target="_self" title="Interactive Brokers Home" alt="Interactive Brokers Logo" class="navbar-brand ib-logo-black"><span>Interactive Brokers Home</span></a>
+        <!-- TOGGLE (XS/SM/MD ONLY) -->
+        <button class="navbar-toggler" type="button" aria-label="Toggle Navigation"><span class="navbar-toggler-icon"><i class="fas fa-bars" aria-hidden="true"></i></span></button>
+        <!-- OPEN ACCOUNT BUTTON (XS/SM/MD ONLY) -->
+        <a href="register.html" target="_self" class="d-block d-lg-none btn btn-open-account">Open Account</a>
+        <!-- LOG IN (SM/MD ONLY) -->
+                        <a href="login.html" target="_self" class="d-none d-sm-block d-lg-none btn btn-log-in">Log In</a>
+                    <!-- IBKR NAV BOTTOM START ----------------------------------------------------------------------------------------------------  -->
+        <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+            <ul class="navbar-nav ml-auto align-items-center">
+                <!-- WHY IBKR -->
+                <li class="nav-item"><a href="why.html" target="_self" class="nav-link">Why IBKR</a></li>
+                <!-- PRICING -->
+               
+                <!-- TRADING -->
+                <li class="nav-item dropdown"><a href="https://www.interactivebrokers.com/en/home.php#" class="nav-link dropdown-toggle" id="nav-technology" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trading</a>
+                    <div class="dropdown-menu dropdown-technology" aria-labelledby="nav-technology">
+                        <div class="row">
+                            <div class="col">
+                                <a href="stockEnhancement.html" target="_self" class="dropdown-item">Stock Yield Enhancement Program</a>
+                                <a href="products.html" target="_self" class="dropdown-item">Products</a>
+                                <a href="enquries.html" target="_self" class="dropdown-item">Enquiries</a>
+                                <a href="securities.html" target="_self" class="dropdown-item">Securities</a>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- SERVICES -->
+                <li class="nav-item "><a href="aboutUs.html" class="nav-link " >About Us</a>
+                
+                </li>
+                <!-- EDUCATION -->
+                <li class="nav-item dropdown"><a href="contactUs.html" class="nav-link ">Contact US</a>
+                  
+                </li>
+                <!-- SEARCH BOX -->
+                <li class="nav-item dropdown d-none d-lg-block" id="search-expand"><a href="https://www.interactivebrokers.com/en/home.php#" class="nav-link nav-search dropdown-toggle" id="nav-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Search</span><i class="fas fa-search" aria-hidden="true"></i></a>
+                    <div class="dropdown-menu dropdown-search" aria-labelledby="nav-search">
+                        <div class="row">
+                            <div class="col">
+                                <div class="search_box">
+                                    <script type="text/javascript">
+                                     searchbox_input_changed=false;
+                                      $('#search-expand').on('shown.bs.dropdown', function(e) {
+                                        $('#searchField').focus();
+                                      });
+                                    </script>
+                                    <form action="https://www.interactivebrokers.com/en/search/index.php" method="get" class="search_form" id="search_form_id">
+                                        <input type="text" aria-label="Search Box" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchField" class="form-control s swap_value searchinput">
+                                        <button type="submit" value="" id="searchsubmit" class="searchsubmit"><i class="fas fa-search" aria-hidden="true"></i></button>
+                                    </form>
+                                    <ul id="saytlist" style="width:150px;"><li style="display:none"></li></ul>
+<script>
+function delay(cb, ms)
+{
+var timer = 0;
+return function() {
+var context = this, args = arguments;
+clearTimeout(timer);
+timer = setTimeout(function() {
+ cb.apply(context, args);
+}, ms  || 0);
+};
+}
+$(function() {
+
+$('#searchField').keyup(delay(function() {
+var q = $('#searchField').val() || '';
+if(q.length >= 3)
+{
+$.ajax({
+  type: "POST",
+  url: 'https://misc.interactivebrokers.com/response_handlers/search/index.php',
+  dataType: "json",
+  data: {
+    'q': q
+  },
+  success: function(r) {
+    if(r && r.success)
+    {
+      var recommendations = '';
+      var limit = Math.min(r.suggestions.length, 10);
+      for(var i = 0; i < limit; i++)
+      {
+        recommendations += "<li>" + r.suggestions[i] + "</li>";
+      }
+      $('#saytlist').html(recommendations);
+      $('#saytlist').show();
+      $('ul#saytlist li').click(function(e) {
+        var list = $(this).text() || '';
+        e.stopPropagation();
+        if(list != '')
+        {
+          $('input#searchField').val(list);
+          $('form#search_form_id').submit();
+        }
+      });
+    }
+  },
+  error: function(xhr, status, err) {}
+});
+} else {
+$('#saytlist').hide();
+}
+}, 500));
+});
+</script>
+                                </div>
+                                <a href="https://www.interactivebrokers.com/en/general/contact/ibot-container.php" target="_self" class="dropdown-item nav-faqs">or Browse our FAQs <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- LOG IN -->
+                <li class="nav-item dropdown d-none d-lg-block"><a href="login.html" target="_self" class="nav-link nav-login dropdown-toggle" id="nav-log-in" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Log In</a>
+                    <div class="dropdown-menu dropdown-login" aria-labelledby="nav-log-in">
+                        <div class="row">
+                            <div class="col">
+                            <a href="login.html" target="_self" class="dropdown-item dropdown-portal">Portal Login</a>
+                                                                                                     
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- OPEN ACCOUNT -->
+                <li class="nav-item dropdown d-none d-lg-block"><a href="https://www.interactivebrokers.com/en/home.php#" target="_self" class="nav-link nav-open-account dropdown-toggle" id="nav-open-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Open Account</a>
+                    <div class="dropdown-menu dropdown-open-account" aria-labelledby="nav-open-account">
+                        <div class="row">
+                            <div class="col">
+                                <a href="register.html" target="_self" class="dropdown-item dropdown-portal">Start Application</a>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- LANGUAGE SELECTOR (XS/SM/MD ONLY) -->
+                <li class="nav-item dropdown d-block d-lg-none"><a href="https://www.interactivebrokers.com/en/home.php#" class="nav-link dropdown-toggle" id="nav-language-mobile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+                    <div class="dropdown-menu dropdown-language-mobile" aria-labelledby="nav-language-mobile">
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://www.interactivebrokers.com/en/home.php" target="_self" class="dropdown-item">English</a>
+                                <a href="https://www.interactivebrokers.com/cn/home.php" target="_self" class="dropdown-item">中文简体</a>
+                                <a href="https://www.interactivebrokers.com/cn/home.php" target="_self" class="dropdown-item">中文繁體</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- NAV BOTTOM END ----------------------------------------------------------------------------------------------------  -->
+</div>
+<!-- HEADER END ----------------------------------------------------------------------------------------------------  -->
+<!-- MOBILE NAV START (XS/SM/MD ONLY) ---------------------------------------------------------------------------------------------------- -->
+<div class="menu-mobile d-lg-none">
+    <!-- CLOSE BUTTON -->
+    <div class="close-button"><a href="javascript:void(0);" target="_self" class="btn-close"><i class="fas fa-times"></i></a></div>
+    <!-- LOGO -->
+    <div class="logo-container"><a href="https://www.interactivebrokers.com/en/home.php" target="_self" class="ib-logo-black"><span>Interactive Brokers Home</span></a></div>
+    <!-- SEARCH
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" class="form-control" placeholder="Search IBKR" name="" id="">
+            <button type="submit" class="btn-search-submit" value="" id=""><i class="fas fa-search" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    -->
+    <ul>
+    <!-- LOG IN -->
+                    <li><a href="login.html" target="_self" class="menu-log-in">Portal Login</a></li>
+                <!-- OPEN ACCOUNT -->
+    <li class="has-submenu"><a href="https://www.interactivebrokers.com/en/home.php#" target="_self" class="menu-open-account" data-submenu="submenu-open-account">Open Account</a>
+        <div class="submenu" id="submenu-open-account">
+            <p class="nav-link-back"><a href="javascript:void(0);" target="_self" data-submenu-close="submenu-open-account">Back</a></p>
+            <p class="submenu-title">OPEN ACCOUNT</p>
+            <ul>
+            <li><a href="register.html" target="_self" class="menu-start-application">Start Application</a></li>
+
+            </ul>
+        </div>
+    </li>
+    <!-- DOWNLOAD IBKR MOBILE -->
+        <!-- FREE TRIAL -->
+    <!-- WHY IBKR -->
+    <li><a href="why.html" target="_self">Why IBKR</a></li>
+    <!-- ACCOUNT TYPES -->
+
+    <!-- PRICING -->
+   
+    <!-- TRADING -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-trading">Trading</a>
+        <div class="submenu" id="submenu-trading">
+            <p class="nav-link-back"><a href="javascript:void(0);" target="_self" data-submenu-close="submenu-trading">Back</a></p>
+            <p class="submenu-title">TRADING</p>
+            <ul>
+            <li><a href="stockEnhancement.html" target="_self">Stock Yield Enhancement Program</a></li>
+            <li><a href="products.html" target="_self">Products</a></li>
+            <li><a href="enquries.html" target="_self">Enquiries</li>
+            <li><a href="securities.html" target="_self">Securities</a></li>
+           
+            </ul>
+        </div>
+    </li>
+    <!-- SERVICES -->
+    <li><a href="aboutUs.html" target="_self">About Us</a></li>
+
+    <!-- EDUCATION -->
+    <li><a href="contactUs.html" target="_self">Contact Us </a></li>
+
+    <!-- ABOUT US -->
+  
+    <!-- LANGUAGE -->
+   
+    </ul>
+</div>
+<div class="website-overlay d-lg-none"></div>
+<!-- MOBILE NAV END (XS/SM/MD ONLY) ---------------------------------------------------------------------------------------------------- -->
+<div id="contents" style="margin-top: 168px;">
+    <section class="page-title" id="page-title">
+        <div class="container">
+            <div class="row">
+                                <div class="col"><h1>About the Interactive Brokers Group</h1></div>
+                            </div>
+        </div>
+    </section>
+    <style type="text/css">
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    vertical-align:middle;
+}
+</style>
+<section id="about-ib">
+	<div class="container">
+    	<div class="row">
+        	<div class="hidden-xs col-sm-11 col-md-11 col-lg-11">
+            	<p class="text-right">January 1, 2022</p>
+                <br>
+            </div>
+        </div>
+    	<div class="row">
+        	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            	<div align="center"><img src="./Home _ Interactive Brokers LLC_files/about_ib_thomas_peterffy.png" alt="Thomas Peterffy" border="0"></div>
+                <br>
+                <p class="text-center">Thomas Peterffy, Chairman</p>
+                <br>
+                <br>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+            	<p><strong>Interactive Brokers Group, Inc.'s</strong> founding member has completed its <strong>44<sup>th</sup> year</strong> as a Broker Dealer with  consolidated equity capital of more than $10.48 billion. Our <strong>mission</strong> remains unchanged:</p>
+                <p>"Create technology to provide liquidity on better terms. Compete on price, speed, size, diversity of global products and advanced trading tools."</p>
+                <p>Interactive Brokers Group and LLC are rated investment grade by Standard &amp; Poor's. </p>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <p>Interactive Brokers Group, Inc. was founded by its Chairman Thomas Peterffy. Over the last 44 years, it has grown internally to become one of the premier securities firms with over $10.48 billion in equity capital.</p>
+                <p>Interactive Brokers conducts its broker/dealer business on over 150 market destinations worldwide. In its broker dealer agency business, IBKR provides direct access ("on line") trade execution and clearing services to institutional and professional traders for a wide variety of electronically traded products including stocks, options, futures, currencies, bonds, gold, crypto* and funds worldwide. Interactive Brokers Group and its affiliates  execute over 2,019,000 trades per day.</p>
+                <p>Interactive Brokers is headquartered in Greenwich, Connecticut and has 2,650+  employees in its offices in the USA, Switzerland, Canada, Hong Kong, UK, Australia, Hungary, Russia, Japan, India,  China, Singapore, Ireland and Estonia. IBKR is regulated by the SEC, FINRA, NYSE, FCA and other regulatory agencies around the world.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="ib-history" class="no-padding-top">
+	<div class="container">
+    	<div class="row">
+        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            	<h2>IBKR Group History</h2>
+                <div class="table-responsive">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" class="table table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                        <td width="15%" align="center" valign="middle"><strong>1977</strong></td>
+                        <td width="85%" align="left" valign="middle"><ul>
+                            <li class="paralist">Thomas Peterffy, the Chairman of the Interactive Brokers Group, buys a seat on the American Stock Exchange (AMEX) and becomes a member, trading as an individual market maker in equity options.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1978</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist"> T.P. &amp; Co. is formed to expand trading activities to several members under badge number 549. The firm is the first to use computer generated fair value sheets printed daily.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1979</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist"> T.P. &amp; Co. expands to four employees, three of whom are AMEX members.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1980</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist"> Plans are made to restructure the operation and to identify price anomalies in several securities at the same time.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1981</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist"> Efforts are made to code and test a system that identifies potential delta neutral trade pairs. Our greatest challenge: how to electronically read the prices of options as they are posted.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1982</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist"> Timber Hill Inc. is formed. Initially, the company trades equity options at the AMEX, clearing through Spear, Leeds &amp; Kellogg. Traders receive telephone instructions identifying pairs and prices.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1983</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Timber Hill creates the first handheld computers used for trading. Their ability to track positions and continually re-price options on one stock quickly gives Timber Hill traders an advantage over their counterparts at the exchange, who continue to use fair value pricing sheets that are updated only once or twice a day.</li>
+                            <li class="paralist">Timber Hill begins trading at the Philadelphia Stock Exchange.</li>
+                            <li class="paralist">Timber Hill expands to 12 employees.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1984</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Timber Hill begins coding a computerized stock index futures and options trading system.</li>
+                            <li class="paralist">Timber Hill becomes a member of The Options Clearing Corporation.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1985</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">In February, Timber Hill's new computer system and network is brought online, ushering in a new era of computerized trading. The system allows Timber Hill to centrally price and manage risk on a portfolio of equity derivatives traded in multiple locations around the country.</li>
+                            <li class="paralist">We install stacks of computer screens on the exchange floors at strategic locations. They are connected to our computer systems in our offices. The screens show our traders, with color coded strips so that they can be read from a distance, the firm's bids and offers for the various products traded on the exchange. The screens also take touch input so that completed trades are input.</li>
+                            <li class="paralist">Timber Hill becomes a member of the New York Futures Exchange.</li>
+                            <li class="paralist"> Timber Hill begins trading at the Chicago Mercantile Exchange (CME), the Chicago Board of Trade and the Chicago Board Options Exchange.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1986</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Timber Hill becomes a member of the Pacific Stock Exchange and the Options Division of the New York Stock Exchange (NYSE), enabling the firm to make automated markets on all US options exchanges.</li>
+                            <li class="paralist">The trading software is rewritten to run on SUN workstations hugely increasing processing speed.</li>
+                            <li class="paralist">The firm's traders generate a 430% return on equity for the year with the new system.</li>
+                            <li class="paralist">The trading software is rewritten to run on SUN workstations, hugely increasing processing speed.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1987</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Timber Hill becomes self-clearing in equities, joining the National Securities Clearing Corp. and the Depository Trust Company.</li>
+                            <li class="paralist">The stock market crash creates the impetus for cross margining between clearing houses with Timber Hill as a major proponent, as Peterffy is a member of the Board of the Options Clearing Corporation. (Cross-margining emerges several years later).</li>
+                            <li class="paralist">Timber Hill expands to 67 employees, most of them on exchange floors, trading with often changing, colored striped screens.</li>
+                            <li class="paralist">Timber Hill establishes a fully automated trading system where its computers trade directly with NASDAQ’s Central Matching computer without any human in the process, other than NASDAQ traders and brokers. The first automated trader on Wall Street. When NASDAQ orders Timber Hill to operate through the keyboard, Timber Hill build a computer driven mechanical system that punches keys on the keyboard.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1989</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist"> Timber Hill becomes a clearing member at the CME.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1990</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">The first electronic options in history opens in Germany.</li>
+                            <li class="paralist">Timber Hill agrees to make a continuous market on options in exchange of being able to communicate with the exchange electronically. Timber Hill hooks up its automated market making system, but the exchange would send trade confirmations to a screen and would not agree to digital.</li>
+                            <li class="paralist">Timber Hill must build a photo lens and optical recognition system to understand trades.</li>
+                            <li class="paralist">Timber Hill Deutschland GmbH is incorporated in Germany, and shortly thereafter, begins trading equity derivatives at the Deutsche Terminborse (DTB), now Eurex. This is Timber Hill's first application of its trading system on a fully automated exchange.</li>
+                            <li class="paralist"> Timber Hill becomes one of the leading market makers at the DTB, claiming more than 10% of the trading volume.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1992</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Timber Hill expands its European trading to the Swiss Options and Financial Futures Exchange (SOFFEX), another fully automated exchange.</li>
+                            <li class="paralist">Timber Hill expands to 142 employees.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1993</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Timber Hill Europe AG is incorporated in Switzerland and takes over the Group's trading at SOFFEX.</li>
+                            <li class="paralist">In the United States, Timber Hill floor traders begin using commercially available handheld computers on the exchange floors, communicating by radio with the firm's Central pricing system. The handheld allows traders to create electronic trade tickets.</li>
+                            <li class="paralist">The CME gives permission to the company to be represented in the trading pit by floor-traders holding handheld computers connected by radio waves, giving the impetus for brokerage. Our clients could INTERACT with the world through the pit and our traders with the screens.</li>
+                            <li class="paralist">Interactive Brokers Inc. (now known as IB LLC) is incorporated as a US broker-dealer, making Timber Hill's vast intercontinental electronic network and trade execution services available to customers.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1994</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Timber Hill Europe begins trading at the European Options Exchange in the Netherlands, the OM Exchange in Sweden (an electronic exchange) and the London International Financial Futures and Options Exchange (LIFFE) in the U.K.</li>
+                            <li class="paralist">Timber Hill Deutschland becomes a member of the electronic Belgian Futures and Options Exchange.</li>
+                            <li class="paralist">IB LLC becomes a member of the NYSE and begins executing stock trades through SuperDot, the electronic order routing system.</li>
+                            <li class="paralist"> IB LLC is regularly named one of the top ten program traders at the NYSE.</li>
+                            <li class="paralist">Timber Hill UK Limited is incorporated. Shortly thereafter, Timber Hill UK takes over Timber Hill's trading at LIFFE.</li>
+                            <li class="paralist">Timber Hill Hong Kong Limited is incorporated.</li>
+                            <li class="paralist">The Timber Hill Group LLC is formed as the holding company for all of Timber Hill's operating companies.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1995</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Timber Hill France S.A. is incorporated and begins making markets at the Paris Traded Equity Options Market and the Marché à Terme International de France futures exchange.</li>
+                            <li class="paralist">Timber Hill Hong Kong begins making markets at the Hong Kong Futures Exchange.</li>
+                            <li class="paralist">Timber Hill Europe expands its activities into the Italian Mercato Italiano Futures and Spanish Meff Renta Variable markets.</li>
+                            <li class="paralist">IB LLC creates a customer workstation, through which professional customers gain access to exchanges around the world.</li>
+                            <li class="paralist">IB LLC executes its first trades for public customers.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1996</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Timber Hill doubles the number of underlying stocks that it trades to more than 800.</li>
+                            <li class="paralist">Timber Hill Securities Hong Kong Limited is incorporated and begins trading at the Stock Exchange of Hong Kong.</li>
+                            <li class="paralist">Timber Hill secures permission to hang large electronic screens showing the firms option quotes on the floor of the CBOE, in exchange of providing a continuous, minimum guaranteed liquidity.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1997</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">The Hong Kong Futures Exchange lists stock index futures on an electronic market. Timber Hill Hong Kong is the only committed market maker.</li>
+                            <li class="paralist"> Timber Hill Australia Pty Limited is incorporated in Australia.</li>
+                            <li class="paralist">Timber Hill Europe begins trading in Norway and becomes a member of the Austrian Derivatives Exchange.</li>
+                            <li class="paralist">With support from Timber Hill providing continuous electronic liquidity, the S&amp;P 500 E-Mini futures becomes the first US electronic market and the most successful electronic futures contract ever introduced.</li>
+                            <li class="paralist">The Timber Hill Group now makes bids and offers for 60,000 items.</li>
+                            <li class="paralist">Timber Hill trades just less than 5% (15,000 transactions) of the daily volume in listed equity derivatives worldwide. Timber Hill expands to 284 employees.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1998</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">IBKR begins to clear online trades for retail customers who are connected directly to Globex to trade S&amp;P futures.</li>
+                            <li class="paralist">Timber Hill Canada Company is formed.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>1999</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">IBKR provides a "smart routing" linkage for multiple listed equity options.</li>
+                            <li class="paralist">IBKR begins to clear online trades for customers trading stocks and equity derivatives through the IB system.</li>
+                            <li class="paralist">IBKR becomes the first firm to offer online, direct access brokerage services in Hong Kong to the HKFE.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>2000</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">On average, more than six percent of the daily global volume of exchange-traded equity options and equity futures is now traded across the Timber Hill/IB network.</li>
+                            <li class="paralist">In the course of the year, IB LLC's customer base increased nearly 500%.</li>
+                            <li class="paralist">Timber Hill becomes a Primary Market Maker on the ISE (International Securities Exchange), the first fully electronic US options exchange. Timber Hill guarantees continuous electronic liquidity and reaches over 50% of the volume on the exchange. The electronic exchange that everyone said would fail in the US is a spectacular success.</li>
+                            <li class="paralist">Interactive Brokers (U.K.) Limited is formed.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>2001</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">The corporate name of The Timber Hill Group LLC is changed to the Interactive Brokers Group LLC.</li>
+                            <li class="paralist">The group's combined electronic brokerage and market making firms' volume now exceeds 200,000 trades per day.</li>
+                            <li class="paralist">Standard &amp; Poor's issues an investment grade rating to Timber Hill LLC. For more information on Standard &amp; Poor's visit: <a href="http://www.standardandpoors.com/" target="_blank" class="linkexternal">http://www.standardandpoors.com</a>.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>2002</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist"> Interactive Brokers, the Bourse de Montreal and the Boston Stock Exchange announce the formation of a partnership to create the Boston Options Exchange (BOX).</li>
+                            <li class="paralist">Timber Hill begins electronic market making in Japan.</li>
+                            <li class="paralist">Interactive Brokers provides customers with an Integrated Investment Management Account that allows trading of stocks, options, futures, and exchange traded funds around the world from a single account.</li>
+                            <li class="paralist">Interactive Brokers gives Financial Advisors the ability to open separately managed Accounts to manage money for multiple clients.</li>
+                            <li class="paralist">Application Program Interface (API) introduced which gives customers and third-party developers the ability to directly integrate with the IBKR trading system.</li>
+                            <li class="paralist"> MobileTrader launched which gives IBKR customers the ability to trade anywhere.</li>
+                            <li class="paralist">Timber Hill becomes the major market maker for the newly introduced US Single Stock Futures.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>2003</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">The Interactive Brokers Group companies transacted approximately 12% of the exchange listed equity and index options worldwide.</li>
+                            <li class="paralist"> Interactive Brokers expands execution and clearing services to include Canadian stocks, equity/index options and futures, Italian index options and futures, German equity options, Japanese index options and futures, Dutch index options and futures, UK equity options and Belgian index options and futures.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>2004</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Interactive Brokers introduces Direct Access Bond Trading, Institutional FOREX, Singapore Futures, German Warrants, French and Dutch stocks and options, CBOE Futures and trading on the Frankfurt/Stuttgart exchanges. Our Intermarket Spread Router searches across all exchanges for the best price on each individual leg of a spread order. We upgraded our account management platform to include a new release of our Trader Workstation, real time charts, scanners, fundamental analytics, BookTrader, OptionTrader, and Advisor account allocations.</li>
+                            <li class="paralist">Standard and Poor's issues an investment grade rating for Interactive Brokers Group LLC. For more information on Standard &amp; Poor's visit: <a href="http://www.standardandpoors.com/" target="_blank" class="linkexternal">http://www.standardandpoors.com</a>.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>2005</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">IBKR is ranked the #1 software based broker, and #1 for lowest trade cost by <a href="https://www.interactivebrokers.com/en/index.php?f=372" target="_self" class="linkarrow">Barron's</a>.</li>
+                            <li class="paralist">IBG is ranked the 16th largest US securities firm by Institutional Investor.</li>
+                            <li class="paralist">The Interactive Brokers Group companies executed over 16% of the world's options on markets where they actively traded.</li>
+                            <li class="paralist">IDEALPRO is launched providing traders with tight forex quotes from multiple bank dealers in a single quote montage.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong><a name="2006"></a>2006</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist"><a href="https://www.interactivebrokers.com/en/index.php?f=5599" target="_self" class="linkarrow">The IB Options Intelligent Report</a> is launched to focus investors' attention on unusual concentration of trading interests and changing levels of uncertainty in the option markets.</li>
+                            <li class="paralist">The Interactive Brokers Group takes stakes in OneChicago, the ISE Stock Exchange, and the CBOE Stock Exchange in its efforts to further innovation in the trading industry.</li>
+                            <li class="paralist">Interactive Brokers leaps ahead of the industry by being the first to offer penny-priced options.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>2007</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">On May 3<sup>rd</sup> Interactive Brokers Group, Inc. sold 40,000,000 shares in a public offering at $30.01 per share.        The float represents approximately 10% interest in Interactive Brokers Group LLC. The members of LLC have the right to sell an additional 12.5% interest to the public in each of the coming seven years. Please refer to the chart at the bottom of the page for our new <a href="https://www.interactivebrokers.com/en/general/about/about.php#ib-company-tree" target="_self" class="linkarrowdown page-scroll">ownership structure</a>.</li>
+                            <li class="paralist">A real-time Portfolio Margin platform is introduced allowing customers trading multiple asset classes to increase their leverage with greater safety.</li>
+                            <li class="paralist"> Exchange for Physicals are launched providing customers with a market determined AAA rated financing alternative to randomly set broker rates.</li>
+                            <li class="paralist"> The Transaction Auditing Group, a third-party provider of audit services, determines that Interactive Brokers' customer equity options orders were improved 14.85% of the time vs. an industry improvement rate of 0.57%.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>2008</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">The IB Risk Navigator<sup>SM</sup> is launched, a real-time market risk management platform for customers, providing unified risk data across multiple asset classes around the globe.</li>
+                            <li class="paralist">Interactive Brokers adds Mexican Stocks/Options/Futures, Spanish Stocks, US Treasury Bonds/Bills/Notes,  and US No Load Mutual Funds to its Suite of Trading Products.</li>
+                            <li class="paralist">A complete family of trading algorithms was introduced to the Trader Workstation including an industry first, the Accumulate-Distribute Algo which allows traders to take advantage of a temporary lack of liquidity.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>2009</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">According to Barron's Magazine, Interactive Brokers maintains its position as "the <a href="https://www.interactivebrokers.com/en/index.php?f=media" target="_self" class="linkarrow">least expensive</a> trading venue for investors," and holds the ranking as the <a href="https://www.interactivebrokers.com/en/index.php?f=1340" target="_self" class="linkarrow">#1 Lowest Cost Broker</a> for the fifth straight year.</li>
+                            <li class="paralist">The free iTWS  trading app for the iPhone<sup>TM</sup> is launched for customers and  provides free utilities for non-customers as well, including real-time forex quotes, email price alerts, and exchange-delayed market data, charts and  scanners.</li>
+                            <li class="paralist">Interactive Brokers releases the Portfolio Analyst, an online tool that allows investors to evaluate the performance of their portfolio and measure their performance against over 80 popular benchmarks.</li>
+                            <li class="paralist">Interactive Brokers offers electronic market access via TWS to AQS®, the first automated, centrally-cleared electronic marketplace for Stock Borrow and Loan transactions.</li>
+                            <li class="paralist">Interactive Brokers supports trading on over 80 different venues, including the National Stock Exchange of India (NSE) for both India residents and Non-Resident Indians (NRIs).</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>2010</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Enhanced support for bond trading is added to the Trader Workstation, including a more powerful US Corporate Bonds scanner and support for trading municipal bonds.</li>
+                            <li class="paralist">IB LLC is awarded a stand-alone rating of "A-/A-2; Outlook Stable" by Standard and Poor's, based on its solid financial profile.</li>
+                            <li class="paralist">2010 TAG statistics show that IBKR continues to top the industry in US stock and options price improvement.</li>
+                            <li class="paralist">Interactive Brokers pays a special cash dividend of $1.79 per share amounting to approximately $1 billion pretax, and still has consolidated equity capital in excess of $4 billion.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>2011</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">IBIS, Capital Introduction for hedge funds, Stock Yield Enhancement and mobileTWS for iPad are released.</li>
+                            <li class="paralist">Interactive Brokers becomes the largest online US broker as measured by Daily Average Revenue Trades  reported.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>2012</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Interactive Brokers pays a special cash dividend  of $1.00 per share amounting to approximately $409 million pretax, and still  has consolidated equity capital in excess of $4 billion.</li>
+                            <li class="paralist">IBKR begins offering Wealth Manager and Money  Manager advisor accounts and opens the fully-electronic Money Manager  Marketplace.</li>
+                            <li class="paralist">The TWS Mosaic trading interface and the Tax  Optimizer for managing capital gains/losses are released.</li>
+                            <li class="paralist">IBKR takes first place in Barron's annual<em> Best Online Brokers </em>review, receiving four-and-a-half out of five stars as the <strong>Best Online Broker</strong> overall.</li>
+                          </ul></td>
+                      </tr>
+                        <tr>
+                        <td align="center" valign="middle"><strong>2013</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">IBKR's Hedge Fund Capital Introduction ramps up with 60% of funds receiving at least one investment and the funds reporting an average 2013 rate of return of 20%.**</li>
+                            <li class="paralist">IBKR releases the <strong>Probability Lab</strong> options trading tool in TWS, providing a revolutionary and practical way to think about options without the complicated mathematics. </li>
+                            <li class="paralist">IBKR integrates <strong>IB FYI</strong> automated portfolio-relevant notifications into the TWS, providing guidance such as shares becoming available for borrowing and options that make sense to exercise.</li>
+                            <li class="paralist">IBKR launches the <strong>Traders' Insight</strong>, a blog tool, providing market insight directly from global market participants to the trading and investing public. </li>
+                            <li class="paralist">For the second year in a row, IBKR is ranked number one by <strong>Barron's</strong> annual <strong>Best Online Brokers</strong> review and is named Best Online Broker overall.</li>
+                          </ul></td>
+                      </tr>
+                        <tr class="">
+                        <td align="center" valign="middle"><strong>2014</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">IBKR begins publishing our "Simple Monthly Cost of Execution" comparing our all-in execution cost to the daily VWAP value for all customer executions, and encourages the SEC to consider requiring all broker-dealers conducting customer business to supplement their existing Rule 606 routing reports with these simple monthly statistics.</li>
+                            <li class="paralist">IBKR introduces the Transaction Cost Analysis (TCA) reporting tool to help customers evaluate execution performance and optimize execution strategies.</li>
+                            <li class="paralist">For the third year in a row, IBKR is ranked number one and named Best Online Broker overall by <b>Barron's</b> annual <b>Best Online Brokers</b> review.</li>
+                            <li class="paralist">IBKR becomes an exchange participant in the groundbreaking Shanghai-Hong Kong Stock Connect program, allowing our Hong Kong and international clients to trade designated securities on the Shanghai Stock Exchange.</li>
+                          </ul></td>
+                      </tr>
+                        <tr class="">
+                        <td align="center" valign="middle"><strong>2015</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">IBKR launches the Investors' Marketplace, an online service where traders and investors, advisors, fund managers, research analysts, technology providers, business developers and administrators can meet and do 
+                            business together.</li>
+                            <li class="paralist">IBKR introduces additional resources for advisors, including CRM (Customer Relationship Management), a fully-integrated system where advisors manage their entire customer relationship life cycle in one place; and the RIA Compliance Center, an important resource for advisors starting and registering their own advisory firms.</li>
+                            <li class="paralist">For the fourth year in a row, IBKR is ranked number one and named Best Online Broker overall by <b>Barron's</b> annual <b>Best Online Brokers</b> review.</li>
+                            <li class="paralist">IBKR acquires Boston-based Covestor, an online investing marketplace and digital asset management company.</li>
+                            <li class="paralist">IBKR releases the Portfolio Builder trading tool in TWS, allowing traders to create an investment strategy driven by top-tier research and
+                            fundamentals data, then back-test and adjust as needed.</li>
+                          </ul></td>
+                      </tr>
+                        <tr class="">
+                        <td align="center" valign="middle"><strong>2016</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">IBKR introduces Greenwich Advisor Compliance Services Corp. (Greenwich Compliance), a new resource to help experienced investors and traders looking to start their own investment advisor firms meet their registration and compliance needs.</li>
+                            <li class="paralist">IBKR releases IBot, a text-based trading interface that accepts text commands entered in plain English and responds quickly with the requested data or action, allowing traders to complete key TWS trading tasks all in one place.</li>
+                            <li class="paralist">IBKR becomes an exchange participant in the groundbreaking Shenzhen-Hong Kong Stock Connect program, allowing our clients around the world to trade designated securities on the Shenzhen Stock Exchange.</li>
+                          </ul></td>
+                      </tr>
+                        <tr class="">
+                        <td align="center" valign="middle"><strong>2017</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">IBKR introduces the Interactive Brokers Debit Mastercard, which allows cardholders to spend and borrow directly against their Interactive Brokers account.</li>
+                            <li class="paralist">IBKR is among the first brokers offering client access to Bitcoin futures
+                            trading on the Cboe Futures Exchange (CFE) and the CME.</li>
+                            <li class="paralist">IBKR introduces a new Order Management System (OMS) for Institutional customers at a groundbreaking low cost of $100 per seat per month.</li>
+                          </ul></td>
+                      </tr>
+                        <tr class="">
+                        <td align="center" valign="middle"><strong>2018</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">IBKR, once again, is rated the Best Online Broker by <a href="https://www.barrons.com/articles/interactive-brokers-takes-top-spot-in-online-broker-ranking-1521854071?shareToken=stf57ffd0f0a4c4977a455e81a5e30f03c">Barron's</a>.</li>
+                            <li class="paralist">Client Portal is introduced. Client Portal offers clients a simple web-based experience by providing single-login access to trading, managing, and monitoring IBKR Accounts.</li>
+                            <li class="paralist">IBKR introduces Bill Pay and Direct Deposit in the US.  Clients can make electronic or check payments to almost any company or individual in the United States while Direct Deposit allows automatic deposit of funds from third parties.</li>
+                            <li class="paralist">IBKR creates a corporate bond trading desk to facilitate larger US and European corporate bond trades where electronic liquidity is insufficient.</li>
+                          </ul></td>
+                      </tr>
+                        <tr class="">
+                        <td align="center" valign="middle"><strong>2019</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Milan Galik is appointed Chief Executive Officer of Interactive Brokers Group, succeeding founder Thomas Peterffy. Mr. Peterffy remains as Chairman of the Board.</li>
+                            <li class="paralist">IBKR once again rated #1 – Best Online Broker by <a href="https://www.barrons.com/articles/who-are-2019s-best-online-brokers-51550882807">Barron's</a> 2019.</li>
+                            <li class="paralist">Interactive Brokers launches IBKR Lite, a new offering that provides commission-free, unlimited trades on US exchange-listed stocks and ETFs.</li>
+                            <li class="paralist">IBKR adds the Tel Aviv Stock Exchange (TASE) and Moscow Exchange (MOEX) to its offering</li>
+                            <li class="paralist">Interactive Brokers broadens access to more expensive stocks and facilitates portfolio diversification by offering Fractional Share Trading and Cash Quantity stock orders.</li>
+                          </ul></td>
+                      </tr>
+                        <tr class="">
+                        <td align="center" valign="middle"><strong>2020</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Interactive Brokers surpasses more than one million client accounts.</li>
+                            <li class="paralist">Global expansion continues, with new IBKR offices established in Singapore, Ireland and Hungary.</li>
+                            <li class="paralist">Bonds Marketplace is launched to help investors find the best pricing on a wide range of fixed income products.</li>
+                            <li class="paralist">Mutual Fund marketplace is launched, providing access to more than 37,000 funds globally, including more than 34,000 no load funds from over 380 fund families.</li>
+                            <li class="paralist">Impact Dashboard introduced to help clients interested in Sustainable Investing align their investments with their values.</li>
+                            <li class="paralist">IBKR commits USD 5 million to assist Covid-19 relief efforts in the United States.</li>
+                          </ul></td>
+                      </tr>
+                        <tr class="">
+                        <td align="center" valign="middle"><strong>2021</strong></td>
+                        <td align="left" valign="middle"><ul>
+                            <li class="paralist">Interactive Brokers introduces cryptocurrency trading through Paxos Trust Company.</li>
+                            <li class="paralist">IBKR launches US spot gold trading, allowing clients to trade in amounts as small as one ounce, side-by-side with other asset classes, from their IBKR account.</li>
+                            <li class="paralist">IMPACT, a patent pending mobile trading application that helps investors align their investments with their values, is launched.</li>
+                            <li class="paralist">GlobalAnalyst, an online tool that helps investors find undervalued companies that may have greater growth potential, is released.</li>
+                            <li class="paralist">Interactive Brokers Prepaid Mastercard card is launched for Canadian clients.</li>
+                          </ul></td>
+                      </tr>
+                      </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="ib-company-tree">
+	<div class="container">
+    	<div class="row">
+        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            	<div align="center"><img class="" data-src="/images/web/Company-Tree-IBG-LLC-2022-b.png" alt="Company Tree" border="0" src="./Home _ Interactive Brokers LLC_files/Company-Tree-IBG-LLC-2022-b.png"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="disclosures" class="disclosure">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <br>
+                <p class="text-small">* Cryptocurrency trade execution and custody are provided by Paxos Trust Company to eligible clients of Interactive Brokers LLC.</p>
+				<p class="text-small">** The 60% figure is as of January 1, 2014 and includes all funds that had been participating in the Program for at least three months</p>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<!-- FOOTER START ---------------------------------------------------------------------------------------------------- -->
+<footer class="footer noprint" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Interactive Brokers ®, IB<sup>SM</sup>, InteractiveBrokers.com ®, Interactive Analytics ®, IB Options Analytics<sup>SM</sup>, IB SmartRouting<sup>SM</sup>, PortfolioAnalyst ®, IB Trader Workstation<sup>SM</sup> and One World, One Account<sup>SM</sup> are service marks and/or trademarks of Interactive Brokers LLC. Supporting documentation for any claims and statistical information will be provided upon request. Any trading symbols displayed are for illustrative purposes only and are not intended to portray recommendations.</p>
+                <p>The risk of loss in online trading of stocks, options, futures, currencies, foreign equities, and fixed Income can be substantial.</p>
+                <p>Options involve risk and are not suitable for all investors. For more information read the <a href="http://www.theocc.com/about/publications/character-risks.jsp" rel="noreferrer noopener" target="_blank">Characteristics and Risks of Standardized Options</a>, also known as the options disclosure document (ODD). Alternatively, call 312-542-6901 to receive a copy of the ODD. Before trading, clients must read the relevant risk disclosure statements on our <a href="https://www.interactivebrokers.com/en//general/homepage-disclosures.php" target="_self">Warnings and Disclosures page</a>. Trading on margin is only for experienced investors with high risk tolerance. You may lose more than your initial investment. For additional information about rates on margin loans, please see <a href="https://www.interactivebrokers.com/en/trading/margin-rates.php" target="_self">Margin Loan Rates</a>. Security futures involve a high degree of risk and are not suitable for all investors. The amount you may lose may be greater than your initial investment. Before trading security futures, read the <a href="https://www.interactivebrokers.com/en/general/homepage-disclosures.php" target="_self">Security Futures Risk Disclosure Statement</a>. Structured products and fixed income products such as bonds are complex products that are more risky and are not suitable for all investors. Before trading, please read the <a href="https://www.interactivebrokers.com/en/general/homepage-disclosures.php" target="_self">Risk Warning and Disclosure Statement</a>.</p>
+                <p>For information on the IBKR ATS, please <a href="https://www.sec.gov/divisions/marketreg/form-ats-n-filings.htm#ats-n" rel="noreferrer noopener" target="_blank">visit the SEC site</a>.</p>
+			</div>
+		</div>
+        <div class="footer-site-links">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Account</p>
+                    <ul>
+                    <li><a href="https://gdcdyn.interactivebrokers.com/sso/Login?RL=1&amp;locale=en_US" target="_self">Log In</a></li>
+                    <li><a href="https://gdcdyn.interactivebrokers.com/Universal/Application" target="_self">Open an Account</a></li>
+                    <li><a href="https://gdcdyn.interactivebrokers.com/sso/Login?c=t&amp;locale=en_US" target="_self">Finish an Application</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/index.php?f=accountConfiguration" target="_self">Account Types</a></li>
+                    <li><a href="https://gdcdyn.interactivebrokers.com/Universal/Application?ft=T" target="_self">Free Trial</a></li>
+                    </ul>
+                    <p>Software &amp; Downloads</p>
+                    <ul>
+                    <li><a href="https://www.interactivebrokers.com/en/trading/tws.php#tws-software" target="_self">Trader Workstation</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/trading/tws-mobile.php#trytoday" target="_self">IBKR Mobile</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/trading/ib-api.php#api-software" target="_self">APIs</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Support</p>
+                    <ul>
+                    <li><a href="https://www.interactivebrokers.com/en/support/fund-my-account.php" target="_self">Fund Your Account</a></li>
+					<li><a href="https://www.interactivebrokers.com/en/support/individuals.php" target="_self">For Individuals</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/support/institutions.php" target="_self">For Institutions</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/index.php?f=salesInfo" target="_self">Institutional Sales Contacts</a></li>
+					<li><a href="https://www.interactivebrokers.com/en/general/contact/ibot-container.php" target="_self">Browse our FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>About Us</p>
+                    <ul>
+                    <li><a href="https://www.interactivebrokers.com/en/general/awards.php" target="_self">Awards</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/general/about/careers-splash.php" target="_self">Careers</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/general/about/about.php" target="_self">Information and History</a></li>
+                    <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_self">Investor Relations</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/index.php?f=news" target="_self">News @ IBKR</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/index.php?f=media" target="_self">Press and Media</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/accounts/legalDocuments/brokerPerformanceReports.php" target="_self">Regulatory Reports</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Follow Us on Social Media</p>
+                    <ul>
+                    <li><a href="https://www.facebook.com/interactivebrokers" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/interactivebrokers" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/interactive-brokers" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://www.twitter.com/ibkr" target="_blank" rel="noreferrer noopener"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.youtube.com/interactivebrokers" target="_blank" rel="noreferrer noopener"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-disclosure-links">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                    <li><a href="https://www.interactivebrokers.com/en/accounts/legalDocuments/accessibility-policy.php" target="_self">Accessibility Policy</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/accounts/legalDocuments/anti-fraud-notice.php" target="_self">Anti-Fraud Notice</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/accounts/legalDocuments/custIdentificationNotice.php" target="_self">Customer Identification Program Notice</a></li>
+                    <li><a href="https://gdcdyn.interactivebrokers.com/Universal/servlet/Registration_v2.formSampleView?formdb=4024" target="_blank" rel="noreferrer noopener">Customer Relationship Summary</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/accounts/legalDocuments/cybersecuritynotice.php" target="_self">Cyber Security Notice</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/index.php?f=legalDocs" target="_self">Forms and Disclosures</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/accounts/legalDocuments/privacy.php" target="_self">Privacy Policy</a></li>
+                    <li><a href="https://www.interactivebrokers.com/en/sitemap/index.php" target="_self">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-entities">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-entity">
+                        <!-- IBKR LLC -->
+                        <h6><a href="https://www.interactivebrokers.com/" target="_self">Interactive Brokers LLC</a></h6>
+                        <p>Is a member <a rel="noreferrer noopener" target="_blank" href="http://www.nyse.com/">NYSE</a> - <a href="http://www.finra.org/" rel="noreferrer noopener" target="_blank">FINRA</a> - <a href="http://www.sipc.org/" rel=" noreferrer noopener" target="_blank">SIPC</a> and regulated by the US Securities and Exchange Commission and the Commodity Futures Trading Commission.<br> <strong>Headquarters:</strong> One Pickwick Plaza, Greenwich, CT 06830 USA<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com/" target="_self">www.interactivebrokers.com</a></p>
+                        <p class="footer-entities-link"><a href="https://www.interactivebrokers.com/en/general/about/about.php#collapseExample" target="_self" class="collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Information on Other Interactive Brokers Affiliates</a></p>
+                    </div>
+                    <div class="footer-entities-list collapse" id="collapseExample">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <!-- IBKR CA -->
+                                <h6><a href="https://www.interactivebrokers.ca/en/home.php" target="_self">Interactive Brokers Canada Inc.</a></h6>
+                                <p>Is a member of the <a href="http://www.iiroc.ca/" target="_blank" rel="noreferrer noopener">Investment Industry Regulatory Organization of Canada (IIROC)</a> and Member - <a href="http://www.cipf.ca/" target="_blank" rel="noreferrer noopener">Canadian Investor Protection Fund.</a><br> <strong>Registered Office:</strong> 1800 McGill College Avenue, Suite 2106, Montreal, Quebec, H3A 3J6, Canada.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.ca/en/home.php" target="_self">www.interactivebrokers.ca</a></p>
+                                <!-- IBKR UK -->
+                                <h6><a href="https://www.interactivebrokers.co.uk/en/home.php" target="_self">Interactive Brokers U.K. Limited</a></h6>
+                                <p>Is authorised and regulated by the <a href="http://www.fca.org.uk/" target="_blank" rel="noreferrer noopener">Financial Conduct Authority</a>. FCA register entry number 208159. <a href="https://www.fca.org.uk/firms/financial-services-register" target="_blank" rel="noreferrer noopener">[https://www.fca.org.uk/firms/financial-services-register]</a><br> <strong>Registered Office:</strong> Level 20 Heron Tower, 110 Bishopsgate, London EC2N 4AY.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.uk/en/home.php" target="_self">www.interactivebrokers.co.uk</a></p>
+                                <!-- IBKR IE -->
+                                <h6><a href="https://www.interactivebrokers.ie/en/home.php" target="_self">Interactive Brokers Ireland Limited</a></h6>
+                                <p>Is regulated by the <a href="https://www.centralbank.ie/" target="_blank" rel="noreferrer noopener">Central Bank of Ireland</a> (CBI, reference number C423427), registered with the Companies Registration Office (CRO, registration number 657406), and is a member of the Irish Investor Compensation Scheme (ICS).<br> <strong>Registered Office:</strong> 10 Earlsfort Terrace, Dublin, D02 T380, Ireland.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.ie/en/home.php" target="_self">www.interactivebrokers.ie</a></p>
+                                <!-- IBKR HU -->
+                                <h6><a href="https://www.interactivebrokers.hu/en/home.php" target="_self">Interactive Brokers Central Europe Zrt.</a></h6>
+                                <p>Is licensed and regulated by the <a href="https://www.mnb.hu/" target="_blank" rel="noreferrer noopener">Central Bank of Hungary (Magyar Nemzeti Bank)</a> under no. H-EN-III-623/2020. Registering Court: Company Registry of the Metropolitan General Court.<br> <strong>Registered Office:</strong> 1075 Budapest, Madách Imre út 13-14., Hungary.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.hu/en/home.php" target="_self">www.interactivebrokers.hu</a></p>
+                                <!-- IBKR AUS -->
+                                <h6><a href="https://www.interactivebrokers.com.au/en/home.php" target="_self">Interactive Brokers Australia Pty. Ltd.</a></h6>
+                                <p>ABN 98 166 929 568 is licensed and regulated by the <a href="http://asic.gov.au/" target="_blank" rel="noreferrer noopener">Australian Securities and Investments Commission</a> (AFSL: 453554) and is a participant of <a href="http://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX</a>, <a href="http://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX 24</a> and <a href="https://www.cboe.com.au/" target="_blank" rel="noreferrer noopener">Cboe Australia</a>.<br> <strong>Registered Office:</strong> Level 40, Grosvenor Place, 225 George Street, Sydney 2000, New South Wales, Australia.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.au/en/home.php" target="_self">www.interactivebrokers.com.au </a></p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <!-- IBKR HK -->
+                                <h6><a href="https://www.interactivebrokers.com.hk/cn/home.php" target="_self">Interactive Brokers Hong Kong Limited</a></h6>
+                                <p>Is regulated by the Hong Kong Securities and Futures Commission, and is a member of the <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">SEHK</a> and the <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">HKFE</a>.<br> <strong>Registered Office:</strong> Suite 1512, Two Pacific Place, 88 Queensway, Admiralty, Hong Kong SAR.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.hk/cn/home.php" target="_self">www.interactivebrokers.com.hk</a></p>
+                                <!-- IBKR IN -->
+                                <h6><a href="https://www.interactivebrokers.co.in/en/home.php" target="_self">Interactive Brokers India Pvt. Ltd.</a></h6>
+                                <p>Is a member of <a href="http://www.nseindia.com/" target="_blank" rel="noreferrer noopener">NSE</a>, <a href="http://www.bseindia.com/" target="_blank" rel="noreferrer noopener">BSE</a>, <a href="http://www.sebi.gov.in/" target="_blank" rel="noreferrer noopener">SEBI</a>. Regn. No. SEBI Registration No. INZ000217730; NSDL: IN-DP-NSDL-301-2008. CIN-U67120MH2007FTC170004.<br> <strong>Registered Office:</strong> 502/A, Times Square, Andheri Kurla Road, Andheri East, Mumbai 400059, India.<br> <strong>Phone:</strong> +91-22-61289888 <span class="pipe">|</span> <strong>Fax:</strong> +91-22-61289898.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.in/en/home.php" target="_self">www.interactivebrokers.co.in</a></p>
+                                <!-- IBKR JP -->
+                                <h6><a href="https://www.interactivebrokers.co.jp/jp/home.php" target="_self">Interactive Brokers Securities Japan Inc.</a></h6>
+                                <p>Is regulated by Kanto Local Finance Bureau (Registration No.187) and is a member of <a href="https://www.jsda.or.jp/" target="_blank" rel="noreferrer noopener">Japan Securities Dealers Association</a> and <a href="https://www.nisshokyo.or.jp/" target="_blank" rel="noreferrer noopener">The Commodity Futures Association of Japan</a>.<br> <strong>Registered Office:</strong> Kasumigaseki Building 25F, 2-5 Kasumigaseki 3-chome, Chiyoda-ku, Tokyo, 100-6025 Japan.<br> <strong>Phone:</strong> +81 (0)3-4588-9700 <em>(On business days from 8:30-17:30 JST)</em>.<br> <strong>Website:</strong>  <a href="https://www.interactivebrokers.co.jp/jp/home.php" target="_self">www.interactivebrokers.co.jp</a></p>
+                                <!-- IBKR SG -->
+                                <h6><a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">Interactive Brokers Singapore Pte. Ltd.</a></h6>
+                                <p>Is licensed and regulated by the Monetary Authority of Singapore (Licence No. CMS100917).<br> <strong>Registered Office:</strong> #40-02A, Asia Square Tower 1, 8 Marina View, Singapore 018960.<br> <strong>Website:</strong>  <a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">www.interactivebrokers.com.sg</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- FOOTER END ---------------------------------------------------------------------------------------------------- -->
+<!-- SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="social-sidebar animated fadeInLeft noprint undefined visible">
+	<span><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i></span>
+	<div class="icon-set">
+		<p>SHARE</p>
+		<div class="share-icon"><a href="https://www.interactivebrokers.com/insights/ibtr_alerts.php?tiv=564&amp;cl=F&amp;p=T" target="_blank" rel="noreferrer noopener" title="Share on Facebook" aria-label="Share on Facebook" class="icon-facebook"><i class="fab fa-facebook-square"></i></a></div>
+		<div class="share-icon"><a href="https://www.interactivebrokers.com/insights/ibtr_alerts.php?tiv=564&amp;cl=T&amp;p=T" target="_blank" rel="noreferrer noopener" title="Share on Twitter" aria-label="Share on Twitter" class="icon-twitter"><i class="fab fa-twitter-square"></i></a></div>
+		<div class="share-icon"><a href="https://www.interactivebrokers.com/insights/ibtr_alerts.php?tiv=564&amp;cl=L&amp;p=T" target="_blank" rel="noreferrer noopener" title="Share on Linkedin" aria-label="Share on Linkedin" class="icon-linkedin"><i class="fab fa-linkedin"></i></a></div>
+		<div class="share-icon"><a href="javascript:void(0);" target="_self" title="Share by Email" aria-label="Share by Email" name="btn_trigger" data-toggle="modal" data-target="#emailModal" id="564" onclick="emailCookie();" class="icon-email"><i class="far fa-envelope"></i></a></div>
+	</div>
+</div>
+<!-- MODAL START | SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="modal fade noprint" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button id="cls_frm_1" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" id="gridSystemModalLabel"><i class="far fa-envelope text-gray"></i> Email</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<form>
+							<div class="form-group">
+								<label for="_to" class="control-label">To:</label> <span id="_err_to" style="color: red;"></span>
+								<input type="text" class="form-control" id="_to">
+							</div>
+							<div class="form-group">
+								<label for="_from" class="control-label">From:</label> <span id="_err_frm" style="color: red;"></span>
+								<input type="text" class="form-control" id="_from">
+							</div>
+							<div class="form-group">
+								<label for="_subject" class="control-label">Subject:</label> <span id="_err_subject" style="color: red;"></span>
+								<input type="text" class="form-control" id="_subject" value="Interactive Brokers">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" id="_content" style="height:200px;"></textarea>
+							</div>
+							<p class="text-sm">URL: <span class="text-italic text-black">www.interactivebrokers.com/en/index.php?f=<span id="vid"></span></span></p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-6">
+						<div align="left">
+							<button id="cls_frm_2" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<div class="col-6">
+						<div align="right">
+							<button type="button" class="btn btn-primary" id="send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="_page_id" name="_page_id" value="564">
+</div>
+<!-- MODAL END | SHARE ON SOCIAL ----------------------------------------------------------------------------------------------------> 
+<script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/ibtr_share.js.download"></script>
+<script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/base64.js.download"></script>
+<script>
+$(document).ready(function() {
+	 $(".social-sidebar span").click(function(){
+		 $(".social-sidebar div").toggleClass("social-sidebar-hide");
+		 $(".social-sidebar span").toggleClass("toggle-arrow");
+ 	 });
+});
+function emailCookie() {
+	if (document.cookie.indexOf("IB_EM_SH") == -1) {
+		var ex=new Date();
+		ex.setTime(ex.getTime()+86400000);
+		document.cookie ='IB_EM_SH='+1+';expires='+ex.toGMTString()+';path=/;domain=';
+	}
+}
+</script>
+<!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<iframe height="0" width="0" style="display: none; visibility: hidden;" src="./Home _ Interactive Brokers LLC_files/activityi.html"></iframe><script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/zeynep.js(1).download"></script>
+<script type="text/javascript" id="">!function(b,c,d,a){b.twq||(a=b.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1",a.queue=[],t=c.createElement(d),t.async=!0,t.src="//static.ads-twitter.com/uwt.js",s=c.getElementsByTagName(d)[0],s.parentNode.insertBefore(t,s))}(window,document,"script");twq("init","nv5q1");twq("track","PageView");</script>
+
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","917285591680749");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=917285591680749&amp;ev=PageView&amp;noscript=1"></noscript>
+
+<img class="yahoo" src="./Home _ Interactive Brokers LLC_files/spp.pl.download"><script type="text/javascript" id="">(function(d,a,b,f,e){d[e]=d[e]||[];d[e].push({projectId:"10000",properties:{pixelId:"10780"}});var c=a.createElement(b);c.src=f;c.async=!0;c.onload=c.onreadystatechange=function(){var a=this.readyState,c=d[e];if(!a||"complete"==a||"loaded"==a)try{var b=YAHOO.ywa.I13N.fireBeacon;d[e]=[];d[e].push=function(a){b([a])};b(c)}catch(g){}};a=a.getElementsByTagName(b)[0];b=a.parentNode;b.insertBefore(c,a)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script><script type="text/javascript" id="">!function(d,g,e){d.TiktokAnalyticsObject=e;var a=d[e]=d[e]||[];a.methods="page track identify instances debug on off once ready alias group enableCookie disableCookie".split(" ");a.setAndDefer=function(b,c){b[c]=function(){b.push([c].concat(Array.prototype.slice.call(arguments,0)))}};for(d=0;d<a.methods.length;d++)a.setAndDefer(a,a.methods[d]);a.instance=function(b){b=a._i[b]||[];for(var c=0;c<a.methods.length;c++)a.setAndDefer(b,a.methods[c]);return b};a.load=function(b,c){var f="https://analytics.tiktok.com/i18n/pixel/events.js";
+a._i=a._i||{};a._i[b]=[];a._i[b]._u=f;a._t=a._t||{};a._t[b]=+new Date;a._o=a._o||{};a._o[b]=c||{};c=document.createElement("script");c.type="text/javascript";c.async=!0;c.src=f+"?sdkid\x3d"+b+"\x26lib\x3d"+e;b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(c,b)};a.load("CAH4O7JC77U32TPDO3GG");a.page()}(window,document,"ttq");</script>
+<script type="text/javascript" src="./Home _ Interactive Brokers LLC_files/lazyload.min.js.download"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    // GATHER HEIGHT OF HEADER
+    var defaultMarginTop = $("div#ibkr-header").outerHeight();
+    // SET MARGIN-TOP OF CONTENTS
+    $("div#contents").css("margin-top", defaultMarginTop);
+    // ON WINDOW RESIZE CALCULATE THE HEIGHT OF THE HEADER AND USE THAT AS THE MARGIN-TOP OF CONTENTS DIV
+    $(window).resize(function() {
+        var headerdHeight = $("div#ibkr-header").outerHeight();
+        var headerHeightDelta = headerdHeight - defaultMarginTop;
+        $("div#contents").css("margin-top", defaultMarginTop + headerHeightDelta);
+    });
+    // ON BANNER CLOSE, SET MARGIN-TOP ON TIMEOUT
+    $("a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerdHeight = $("div#ibkr-header").outerHeight();
+            $("div#contents").css("margin-top", headerdHeight);
+        },500);
+    });
+    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+        },
+        closed: function () {
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+</script>
+ <script>var ibdmn='interactivebrokers.co.uk';(function(d,c){let s=d.createElement('script');s.src='https://www.interactivebrokers.co.uk/mkt/ibgtag.js?wbst='+c;s.id='_ib_tag';s.async=true;d.getElementsByTagName('head')[0].appendChild(s);})(document,'UK');</script><!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" href="https://www.interactivebrokers.com/fonts/fontawesome-5.9.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="https://www.interactivebrokers.com/fonts/fontawesome-5.9.0/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="https://www.interactivebrokers.com/fonts/fontawesome-5.9.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="./Home _ Interactive Brokers LLC_files/all.min.css" as="style">
+<link rel="stylesheet" href="./Home _ Interactive Brokers LLC_files/all.min.css" type="text/css" media="all"><img class="ywa-10000" src="./Home _ Interactive Brokers LLC_files/sp.pl.download" alt="dot image pixel" style="display: none;">
+<link rel="preload" href="./Home _ Interactive Brokers LLC_files/animate.min.css" as="style">
+<link rel="stylesheet" href="./Home _ Interactive Brokers LLC_files/animate.min.css" type="text/css" media="all">
+<link rel="preload" href="./Home _ Interactive Brokers LLC_files/bootstrap-switch.min.css" as="style">
+<link rel="stylesheet" href="./Home _ Interactive Brokers LLC_files/bootstrap-switch.min.css" type="text/css" media="all">
+    <link rel="preload" href="./Home _ Interactive Brokers LLC_files/ibkr-website-print.css" as="style">
+    <link rel="stylesheet" href="./Home _ Interactive Brokers LLC_files/ibkr-website-print.css" type="text/css" media="print">
+
+<div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon988648688461"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon779304085640" width="0" height="0" alt="" src="./Home _ Interactive Brokers LLC_files/0"></div><img src="./Home _ Interactive Brokers LLC_files/adsct" height="1" width="1" style="display: none;"><img src="./Home _ Interactive Brokers LLC_files/adsct(1)" height="1" width="1" style="display: none;"><a href="https://www.interactivebrokers.com/en/general/about/about.php#" id="toTop" style="display: inline;"><span id="toTopHover"></span>To Top</a></body><iframe id="__JSBridgeIframe_1.0__" style="display: none;" src="./Home _ Interactive Brokers LLC_files/saved_resource.html"></iframe><iframe id="__JSBridgeIframe_SetResult_1.0__" style="display: none;" src="./Home _ Interactive Brokers LLC_files/saved_resource(1).html"></iframe><iframe id="__JSBridgeIframe__" style="display: none;" src="./Home _ Interactive Brokers LLC_files/saved_resource(2).html"></iframe><iframe id="__JSBridgeIframe_SetResult__" style="display: none;" src="./Home _ Interactive Brokers LLC_files/saved_resource(3).html"></iframe></html>

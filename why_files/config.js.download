@@ -1,0 +1,6 @@
+
+window[window["TiktokAnalyticsObject"]].instance("CAH4O7JC77U32TPDO3GG").setAdvancedMatchingAvailableProperties({"email":true,"phone_number":true,"auto_email":false,"auto_phone_number":false});
+window[window["TiktokAnalyticsObject"]].instance("CAH4O7JC77U32TPDO3GG").setPixelInfo && window[window["TiktokAnalyticsObject"]].instance("CAH4O7JC77U32TPDO3GG").setPixelInfo({status: 0, name: "TikTok Pixel US", advertiserID: "7099478431674466305", setupMode: 1, partner: "", is_onsite: false });
+window[window["TiktokAnalyticsObject"]].setPCMDomain && window[window["TiktokAnalyticsObject"]].setPCMDomain("interactivebrokers.com");
+window[window["TiktokAnalyticsObject"]].setPCMConfig && window[window["TiktokAnalyticsObject"]].setPCMConfig([]);
+window[window["TiktokAnalyticsObject"]].enableFirstPartyCookie && window[window["TiktokAnalyticsObject"]].enableFirstPartyCookie(true);

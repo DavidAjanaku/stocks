@@ -1,0 +1,406 @@
+/* String */
+if (typeof String.prototype.startsWith !== "function") {
+    String.prototype.startsWith = function(string) {
+        return this.lastIndexOf(string, 0) === 0;
+    };
+}
+
+if (typeof String.prototype.endsWith !== "function") {
+    String.prototype.endsWith = function(string) {
+        return this.lastIndexOf(string, this.length - string.length) !== -1;
+    };
+}
+
+if (typeof String.prototype.contains !== "function") {
+    String.prototype.contains = function(string) {
+        return this.indexOf(string) > -1;
+    };
+}
+
+if (typeof String.prototype.stripNonNumerics !== "function") {
+    String.prototype.stripNonNumerics = function() {
+        return this.replace(/\D/g, "");
+    };
+}
+
+if (typeof String.prototype.stripNumerics !== "function") {
+    String.prototype.stripNumerics = function() {
+        return this.replace(/[0-9]/g, "");
+    };
+}
+
+if (typeof String.prototype.stripNonASCII !== "function") {
+    String.prototype.stripNonASCII = function() {
+        return this.replace(/[^\x20-\x7E]/g, "");
+    };
+}
+
+/* Object */
+if (typeof Object.size !== "function") {
+    Object.size = function(obj) {
+        var size = 0, key;
+        for (key in obj)
+            if (obj.hasOwnProperty(key))
+                size++;
+        return size;
+    };
+}
+
+/* HTMLElement */
+if (typeof HTMLElement.prototype.isScrolledIntoView !== "function") {
+    HTMLElement.prototype.isScrolledIntoView = function() {
+        var elementBoundingBox = this.getBoundingClientRect();
+        var elementTop = elementBoundingBox.top;
+        var elementBottom = elementBoundingBox.bottom;
+
+        return (elementTop >= 0) && (elementBottom <= window.innerHeight);
+    };
+}
+
+/* jQuery */
+if (typeof $.fn.isAfter !== "function") {
+    $.fn.isAfter = function(element) {
+        var selector = "#" + element.attr("id");
+        return this.prevAll(selector).length !== 0;
+    };
+}
+
+if (typeof $.fn.isBefore !== "function") {
+    $.fn.isBefore = function(element) {
+        var selector = "#" + element.attr("id");
+        return this.nextAll(selector).length !== 0;
+    };
+}
+
+if (typeof $.fn.hasAttr !== "function") {
+    $.fn.hasAttr = function(name) {
+        return this.attr(name) !== undefined;
+    };
+}
+
+if (typeof $.fn.isVisible !== "function") {
+    $.fn.isVisible = function() {
+        return this.attr("data-ghost") === "F";
+    };
+}
+
+if (typeof $.fn.makeVisible !== "function") {
+    $.fn.makeVisible = function() {
+        this.attr("data-ghost", "F");
+        this.css("visibility", "visible");
+    };
+}
+
+if (typeof $.fn.makeInvisible !== "function") {
+    $.fn.makeInvisible = function() {
+        this.attr("data-ghost", "T");
+        this.css("visibility", "hidden");
+    };
+}
+
+if (typeof $.fn.val === "function") {
+    var originalVal = $.fn.val;
+    $.fn.val = function() {
+        var argumentsExist = arguments.length > 0;
+
+        var previous;
+        if (argumentsExist) {
+            previous = originalVal.apply(this, []);
+        }
+
+        var result = originalVal.apply(this, arguments);
+        var valueChanged = previous != originalVal.apply(this, []);
+        if (argumentsExist && valueChanged) {
+            if ($(this).data("chosen") != undefined) {
+                $(this).change();
+            }
+        } else if (!argumentsExist) {
+            if ($(this).is("select") && result === null) {
+                result = "";
+            }
+        }
+
+        return result;
+    };
+}
+
+if (typeof $.fn.onFirst !== "function") {
+    $.fn.onFirst = function(name, fn) {
+        this.on(name, fn);
+
+        this.each(function() {
+            var handlers = $._data(this, "events")[name.split(".")[0]];
+            var handler = handlers.pop();
+            handlers.splice(0, 0, handler);
+        });
+    };
+}
+
+/* Chosen Widget */
+if (typeof $.fn.initChosen !== "function") {
+    $.fn.initChosen = function() {
+        if (globals.isIosPlatform || globals.isAndroidPlatform || globals.isPrinter) {
+            return;
+        }
+
+        var registerChosen = function registerChosenJs(select) {
+            if (select.is(":disabled")) {
+                return;
+            }
+            if (select.data("chosen") != undefined) {
+                select.chosen("destroy");
+            }
+
+            var config = {
+                no_results_text : globals.staticTextMap["#noTextMatchSelect"][globals.currentLanguage],
+                width : "100%"
+            };
+            var onSelectChange = function() {
+                $(this).trigger("chosen:updated");
+            };
+
+            if (select.hasAttr("data-chosen-default")) {
+                var defaultVal = select.attr("data-chosen-default");
+                var defaultIndex = select.attr("data-chosen-default-index");
+                select.on("chosen:no_results", function(event, parameters) {
+                   $("ul.chosen-results").append("<li class='active-result' data-option-array-index='" + defaultIndex + "'>" + defaultVal + "</li>");
+                });
+            }
+            select.off("change", onSelectChange);
+            select.on("change", onSelectChange);
+            select.chosen(config);
+        }
+
+        if (this.hasAttr("data-chosen-target")) {
+            registerChosen($(this));
+        } else {
+            this.find("select[data-chosen-target]").each(function() {
+                registerChosen($(this));
+            });
+        }
+    };
+}
+
+if (typeof $.fn.destroyChosen !== "function") {
+    $.fn.destroyChosen = function() {
+        if (this.hasAttr("data-chosen-target")) {
+            this.chosen("destroy");
+        } else {
+            this.find("select[data-chosen-target]").each(function() {
+                $(this).chosen("destroy");
+            });
+        }
+    };
+}
+
+if (typeof $.fn.filterEnhancedSelect !== "function") {
+    $.fn.filterEnhancedSelect = function() {
+        if (this.data("chosen") === undefined) {
+            return this;
+        } else {
+            return $("#" + this.attr("id") + "_chosen");
+        }
+    };
+}
+
+/* iCheck Widget */
+if (typeof $.fn.initIChecks !== "function") {
+    $.fn.initIChecks = function() {
+        this.find("input[type='checkbox'][data-icheck], input[type='radio'][data-icheck]").each(function() {
+            var dataICheck = $(this);
+
+            var iCheckColor = "";
+            if (dataICheck.hasAttr("data-icheck-color")) {
+                iCheckColor = "-" + dataICheck.attr("data-icheck-color");
+            }
+
+            dataICheck.iCheck({
+                handle : dataICheck.attr("type"),
+                radioClass : "iradio_square" + iCheckColor,
+                checkboxClass : "icheckbox_square" + iCheckColor,
+                increaseArea : "20%"
+            });
+
+            dataICheck.on("ifChanged", function(event) {
+                $(event.target).trigger("change");
+            });
+
+            if (dataICheck.hasAttr("data-icheck-if-checked")) {
+                if (typeof window[dataICheck.attr("data-icheck-if-checked")] === "function") {
+                    dataICheck.on("ifChecked", window[dataICheck.attr("data-icheck-if-checked")]);
+                } else {
+                    dataICheck.on("ifChecked", function(event, state) {
+                        eval(dataICheck.attr("data-icheck-if-checked"));
+                    });
+                }
+            }
+
+            if (dataICheck.hasAttr("data-icheck-if-toggled")) {
+                if (typeof window[dataICheck.attr("data-icheck-if-toggled")] === "function") {
+                    dataICheck.on("ifToggled", window[dataICheck.attr("data-icheck-if-toggled")]);
+                } else {
+                    dataICheck.on("ifToggled", function(event, state) {
+                        eval(dataICheck.attr("data-icheck-if-toggled"));
+                    });
+                }
+            }
+        });
+    };
+}
+
+if (typeof $.fn.destroyIChecks !== "function") {
+    $.fn.destroyIChecks = function() {
+        this.find("input[type='checkbox'][data-icheck], input[type='radio'][data-icheck]").each(function() {
+            $(this).iCheck("destroy");
+        });
+    };
+}
+
+/* Toggle Widget */
+if (typeof $.fn.initToggle !== "function") {
+    $.fn.initToggle = function() {
+        this.find("button[data-itoggle]").each(function() {
+            var dataIToggle = $(this);
+            dataIToggle.on("click", function() {
+                if (dataIToggle.hasAttr("disabled")) {
+                    return;
+                }
+                if (!dataIToggle.hasClass("active")) {
+                    var dataIToggleSibling = dataIToggle.siblings("button");
+                    var dataIToggleInputSibling = dataIToggle.siblings("input");
+                    dataIToggleSibling.removeClass("active");
+                    dataIToggle.addClass("active");
+                    dataIToggleInputSibling.prop("checked", !dataIToggleInputSibling.is(":checked")).trigger("change");
+                }
+            })
+        });
+        this.find("input[data-input-itoggle]").each(function() {
+            var inputData = $(this);
+            inputData.on("change", function() {
+                var lid = inputData.attr("id");
+                if (inputData.is(":checked")) {
+                    $("#" + lid + "_positive").addClass("active");
+                    $("#" + lid + "_negative").removeClass("active");
+                } else {
+                    $("#" + lid + "_negative").addClass("active");
+                    $("#" + lid + "_positive").removeClass("active");
+                }
+            });
+            if (inputData.hasAttr("data-itoggle-input-changed")) {
+                if (typeof window[inputData.attr("data-itoggle-input-changed")] === "function") {
+                    inputData.on("change", window[inputData.attr("data-itoggle-input-changed")]);
+                } else {
+                    inputData.on("change", function(event, state) {
+                        eval(inputData.attr("data-itoggle-input-changed"));
+                    });
+                }
+            }
+        });
+    };
+}
+
+if (typeof $.fn.itoggle !== "function") {
+    $.fn.itoggle = function(cmd, value) {
+        var toggleInput = $(this);
+        var toggleInputId = toggleInput.attr("id");
+        if (typeof cmd != "string") {
+            return;
+        } else if (cmd.toLowerCase() == "disabled") {
+            if (typeof value == "undefined") {
+                return;
+            } else if (value === true) {
+                $("#" + toggleInputId + "_positive").addClass("disabled");
+                $("#" + toggleInputId + "_negative").addClass("disabled");
+            } else if (value === false) {
+                $("#" + toggleInputId + "_positive").removeClass("disabled");
+                $("#" + toggleInputId + "_negative").removeClass("disabled");
+            }
+        } else if (cmd.toLowerCase() == "state" && typeof value == "undefined") {
+            return toggleInput.is(":checked");
+        } else if (cmd.toLowerCase() == "state") {
+            if (value === true) {
+                $("#" + toggleInputId + "_positive").click();
+            } else if (value === false) {
+                $("#" + toggleInputId + "_negative").click();
+            }
+        }
+    };
+}
+
+/* Count Down Timer */
+function CountDownTimer(duration, granularity) {
+    this.duration = duration;
+    this.granularity = granularity || 1000;
+    this.tickFtns = [];
+    this.running = false;
+}
+
+CountDownTimer.prototype.start = function() {
+    if (this.running)
+        return;
+
+    this.running = true;
+
+    var start = Date.now();
+    var that = this;
+    var diff;
+    var obj;
+
+    (function timer() {
+        if (that.running) {
+            diff = that.duration - (((Date.now() - start) / 1000) | 0);
+            if (diff > 0) {
+                setTimeout(timer, that.granularity);
+            } else {
+                diff = 0;
+                that.running = false;
+            }
+
+            obj = CountDownTimer.parse(diff);
+            that.tickFtns.forEach(function(ftn) {
+                ftn.call(this, obj.minutes, obj.seconds);
+            }, that);
+        }
+    }());
+};
+
+CountDownTimer.prototype.stop = function() {
+    this.running = false;
+};
+
+CountDownTimer.prototype.onTick = function(ftn) {
+    if (typeof ftn === 'function') {
+        this.tickFtns.push(ftn);
+    }
+
+    return this;
+};
+
+CountDownTimer.prototype.expired = function() {
+    return !this.running;
+};
+
+CountDownTimer.parse = function(seconds) {
+    return {
+        'minutes' : (seconds / 60) | 0,
+        'seconds' : (seconds % 60) | 0
+    };
+};
+
+(function() {
+    if (typeof window.CustomEvent === "function") {
+        return false;
+    }
+
+    function CustomEvent(event, params) {
+        params = params || { bubbles : false, cancelable : false, detail : null };
+        var evt = document.createEvent("CustomEvent");
+        evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+        return evt;
+    };
+
+    CustomEvent.prototype = window.Event.prototype;
+    window.CustomEvent = CustomEvent;
+})();
+
+//# sourceURL=prototypeFunctions.js

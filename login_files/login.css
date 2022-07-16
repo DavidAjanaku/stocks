@@ -1,0 +1,626 @@
+/* SCSS Document */
+/* SCSS Document */
+/* TEMPLATE | FONTS ---------------------------------------------------------------------------------------------------- */
+@font-face {
+  font-family: proxima-nova;
+  font-style: normal;
+  font-weight: 300;
+  src: local("proxima-nova-light"), local("proxima nova light"), url("/fonts/proxima-nova/Proxima-Nova-Light.woff2") format("woff2"), url("/fonts/proxima-nova/Proxima-Nova-Light.woff") format("woff");
+  font-display: swap; }
+@font-face {
+  font-family: proxima-nova;
+  font-style: normal;
+  font-weight: 400;
+  src: local("proxima-nova-regular"), local("proxima nova regular"), url("/fonts/proxima-nova/Proxima-Nova-Regular.woff2") format("woff2"), url("/fonts/proxima-nova/Proxima-Nova-Regular.woff") format("woff");
+  font-display: swap; }
+@font-face {
+  font-family: proxima-nova;
+  font-style: normal;
+  font-weight: 600;
+  src: local("proxima-nova-semibold"), local("proxima nova semibold"), url("/fonts/proxima-nova/Proxima-Nova-Semibold.woff2") format("woff2"), url("/fonts/proxima-nova/Proxima-Nova-Semibold.woff") format("woff");
+  font-display: swap; }
+/* TEMPLATE | VARIABLES ---------------------------------------------------------------------------------------------------- */
+/* TEMPLATE | MIXINS ---------------------------------------------------------------------------------------------------- */
+/* IBKR-SHARED.CSS OVERRIDES ---------------------------------------------------------------------------------------------------- */
+/* line 6, login.scss */
+body.bg-gray {
+  background: #F3F3F3 !important; }
+
+/* line 9, login.scss */
+input:focus, select:focus, textarea:focus, button:focus {
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent; }
+
+/* COOKIE BANNER (GDPR) STYLES ---------------------------------------------------------------------------------------------------- */
+/* line 18, login.scss */
+.cookie-banner {
+  position: fixed;
+  width: 100%;
+  z-index: 10; }
+
+/* LOGIN CONTAINER STYLES ---------------------------------------------------------------------------------------------------- */
+/* line 27, login.scss */
+section.login-page {
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 175px);
+  background-size: cover;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+  /* line 37, login.scss */
+  section.login-page .container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-height: auto;
+    box-sizing: border-box; }
+    /* line 47, login.scss */
+    section.login-page .container .login-container {
+      margin: 0px;
+      padding: 10px;
+      width: 500px;
+      height: auto;
+      background-color: transparent;
+      box-sizing: border-box; }
+      /* line 54, login.scss */
+      section.login-page .container .login-container .ib-logo-black, section.login-page .container .login-container .ib-logo-white {
+        margin: 0px auto 20px auto;
+        width: 220px;
+        height: 34px;
+        display: block;
+        background-size: auto 100%; }
+      /* line 61, login.scss */
+      section.login-page .container .login-container .login {
+        margin: 0px;
+        padding: 20px 40px;
+        background-color: #FFFFFF;
+        border-top: 5px solid #0B56BF;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); }
+        /* line 67, login.scss */
+        section.login-page .container .login-container .login h1 {
+          margin: 10px 0px 0px 0px;
+          padding: 0px;
+          font-weight: 400;
+          font-size: 1.25rem;
+          line-height: 1.625rem;
+          color: #0B56BF; }
+        /* line 76, login.scss */
+        section.login-page .container .login-container .login p.login-switch {
+          text-align: right;
+          color: #999999; }
+        /* line 80, login.scss */
+        section.login-page .container .login-container .login p.link-password {
+          margin: 5px 0px 0px 0px;
+          text-align: right; }
+          /* line 83, login.scss */
+          section.login-page .container .login-container .login p.link-password a, section.login-page .container .login-container .login p.link-password a:link, section.login-page .container .login-container .login p.link-password a:visited, section.login-page .container .login-container .login p.link-password a:hover, section.login-page .container .login-container .login p.link-password a:active, section.login-page .container .login-container .login p.link-password a:focus {
+            font-size: 0.75rem;
+            color: #666666; }
+          /* line 87, login.scss */
+          section.login-page .container .login-container .login p.link-password a:hover {
+            color: #000000; }
+        /* line 91, login.scss */
+        section.login-page .container .login-container .login p span.switchery {
+          margin: 0px 5px; }
+        /* line 94, login.scss */
+        section.login-page .container .login-container .login p span.active {
+          color: #0B56BF; }
+        /* line 98, login.scss */
+        section.login-page .container .login-container .login .form-control {
+          padding: 10px 16px 10px 16px;
+          height: 46px;
+          font-size: 1.125rem; }
+          /* line 102, login.scss */
+          section.login-page .container .login-container .login .form-control:hover {
+            border-color: #000000; }
+          /* line 105, login.scss */
+          section.login-page .container .login-container .login .form-control::placeholder {
+            color: #CCCCCC; }
+        /* line 109, login.scss */
+        section.login-page .container .login-container .login .form-group {
+          margin: 10px 0px 0px 0px; }
+          /* line 111, login.scss */
+          section.login-page .container .login-container .login .form-group .icon-addon {
+            display: block;
+            position: relative;
+            color: #666666; }
+            /* line 115, login.scss */
+            section.login-page .container .login-container .login .form-group .icon-addon:after, section.login-page .container .login-container .login .form-group .icon-addon:before {
+              display: flex;
+              content: " "; }
+            /* line 192, ../web/ibkr-foundation.scss */
+            section.login-page .container .login-container .login .form-group .icon-addon::after {
+              display: block;
+              content: "";
+              clear: both; }
+            /* line 120, login.scss */
+            section.login-page .container .login-container .login .form-group .icon-addon .fa {
+              position: absolute;
+              top: 4px;
+              left: 11px;
+              z-index: 2;
+              margin-left: 0;
+              padding: 10px 0;
+              width: 20px;
+              font-size: 1.125rem;
+              text-align: center;
+              color: #999999; }
+            /* line 133, login.scss */
+            section.login-page .container .login-container .login .form-group .icon-addon:hover .fa {
+              color: #000000; }
+            /* line 137, login.scss */
+            section.login-page .container .login-container .login .form-group .icon-addon .form-control {
+              float: left;
+              padding: 10px 16px 10px 40px;
+              height: 46px;
+              font-weight: normal;
+              font-size: 1.125rem;
+              line-height: 1.375rem; }
+              /* line 144, login.scss */
+              section.login-page .container .login-container .login .form-group .icon-addon .form-control:focus + .fa {
+                color: #333333; }
+        /* line 150, login.scss */
+        section.login-page .container .login-container .login .btn-primary {
+          margin: 0px auto;
+          width: 100%;
+          text-transform: none;
+          background-color: #0B56BF;
+          border-color: #0B56BF; }
+          /* line 156, login.scss */
+          section.login-page .container .login-container .login .btn-primary::after {
+            position: absolute;
+            right: 70px;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 900;
+            font-family: "Font Awesome 5 Free";
+            content: "\f061";
+            opacity: 0;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out; }
+          /* line 164, login.scss */
+          section.login-page .container .login-container .login .btn-primary:hover::after {
+            opacity: 1;
+            transform: translate(5px, 0px); }
+          /* line 168, login.scss */
+          section.login-page .container .login-container .login .btn-primary.disabled.focus, section.login-page .container .login-container .login .btn-primary.disabled:focus, section.login-page .container .login-container .login .btn-primary.disabled:hover, section.login-page .container .login-container .login .btn-primary[disabled].focus, section.login-page .container .login-container .login .btn-primary[disabled]:focus, section.login-page .container .login-container .login .btn-primary[disabled]:hover, fieldset[disabled] section.login-page .container .login-container .login .btn-primary.focus, fieldset[disabled] section.login-page .container .login-container .login .btn-primary:focus, fieldset[disabled] section.login-page .container .login-container .login .btn-primary:hover {
+            background-color: #0B56BF;
+            border-color: #0B56BF; }
+        /* line 174, login.scss */
+        section.login-page .container .login-container .login .alert p {
+          font-size: 0.75rem;
+          line-height: 1.0rem;
+          text-align: center; }
+        /* line 181, login.scss */
+        section.login-page .container .login-container .login .gsss #app {
+          display: flex;
+          margin: 0px auto;
+          min-width: 250px;
+          max-width: 600px;
+          background-color: #FCF8E2; }
+          /* line 187, login.scss */
+          section.login-page .container .login-container .login .gsss #app .content {
+            display: flex;
+            flex-grow: 0;
+            height: 100%; }
+            /* line 191, login.scss */
+            section.login-page .container .login-container .login .gsss #app .content .icon-attention {
+              display: flex;
+              align-items: center;
+              padding: 10px; }
+            /* line 196, login.scss */
+            section.login-page .container .login-container .login .gsss #app .content .bulletin {
+              display: flex;
+              flex-direction: column;
+              padding: 10px; }
+              /* line 200, login.scss */
+              section.login-page .container .login-container .login .gsss #app .content .bulletin #bulletin {
+                flex-grow: 9;
+                display: -webkit-inline-box;
+                -webkit-box-align: center; }
+                /* line 204, login.scss */
+                section.login-page .container .login-container .login .gsss #app .content .bulletin #bulletin p {
+                  margin: 10px 0px 10px 0px;
+                  font-size: 0.75rem;
+                  line-height: 1.0rem; }
+    /* line 216, login.scss */
+    section.login-page .container .simulated-banner {
+      margin: -25px -40px 20px -40px;
+      padding: 2px 0px 2px 0px;
+      width: 480px;
+      background-color: #E62333; }
+      /* line 221, login.scss */
+      section.login-page .container .simulated-banner p {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        color: #FFFFFF;
+        text-transform: uppercase; }
+  /* line 230, login.scss */
+  section.login-page p {
+    margin: 10px 0px 10px 0px; }
+
+/* line 234, login.scss */
+body.bg-gray section.login-page .container .login-container .ib-logo-white {
+  background: transparent url("/images/web/logos/ib-logo-text-black.svg") no-repeat 0px 0px !important; }
+
+/* DOWNLOAD TEXT CONTAINER STYLES ---------------------------------------------------------------------------------------------------- */
+/* line 241, login.scss */
+section.download-text {
+  margin: 0px;
+  padding: 10px 0px 5px 0px;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box; }
+  /* line 247, login.scss */
+  section.download-text p {
+    font-weight: 300;
+    text-align: center; }
+
+/* FOOTER ---------------------------------------------------------------------------------------------------- */
+/* line 256, login.scss */
+footer {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: auto;
+  background-color: #FFFFFF;
+  box-sizing: border-box; }
+  /* line 263, login.scss */
+  footer .footer-content {
+    width: 100%;
+    box-sizing: border-box; }
+    /* line 266, login.scss */
+    footer .footer-content .footer-downloads {
+      padding: 20px 0px;
+      border-bottom: 1px solid #D7D7D7; }
+      /* line 270, login.scss */
+      footer .footer-content .footer-downloads .row > div {
+        display: flex;
+        align-content: stretch;
+        align-items: stretch; }
+        /* line 274, login.scss */
+        footer .footer-content .footer-downloads .row > div .software-download {
+          display: flex;
+          justify-content: flex-start;
+          align-content: stretch;
+          align-items: center;
+          float: left;
+          padding: 0px 20px;
+          border-right: 1px solid #D7D7D7; }
+          /* line 192, ../web/ibkr-foundation.scss */
+          footer .footer-content .footer-downloads .row > div .software-download::after {
+            display: block;
+            content: "";
+            clear: both; }
+          /* line 283, login.scss */
+          footer .footer-content .footer-downloads .row > div .software-download:last-child {
+            border-right: none; }
+          /* line 287, login.scss */
+          footer .footer-content .footer-downloads .row > div .software-download .footer-text p {
+            margin: 0px;
+            font-weight: 600;
+            font-size: 1.0rem;
+            line-height: 1.0rem;
+            text-align: left;
+            color: #333333; }
+            /* line 294, login.scss */
+            footer .footer-content .footer-downloads .row > div .software-download .footer-text p span {
+              font-weight: 300;
+              font-size: 0.625rem;
+              color: #666666; }
+          /* line 301, login.scss */
+          footer .footer-content .footer-downloads .row > div .software-download .footer-img {
+            text-align: right; }
+            /* line 303, login.scss */
+            footer .footer-content .footer-downloads .row > div .software-download .footer-img a {
+              display: inline-block; }
+              /* line 305, login.scss */
+              footer .footer-content .footer-downloads .row > div .software-download .footer-img a img {
+                max-height: 40px; }
+              /* line 308, login.scss */
+              footer .footer-content .footer-downloads .row > div .software-download .footer-img a + a {
+                margin-left: 5px; }
+          /* line 313, login.scss */
+          footer .footer-content .footer-downloads .row > div .software-download.software-ibkr {
+            width: 40%; }
+            /* line 315, login.scss */
+            footer .footer-content .footer-downloads .row > div .software-download.software-ibkr .footer-text {
+              width: calc(100% - 265px); }
+            /* line 318, login.scss */
+            footer .footer-content .footer-downloads .row > div .software-download.software-ibkr .footer-img {
+              width: 265px; }
+          /* line 322, login.scss */
+          footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws {
+            width: 30%; }
+            /* line 324, login.scss */
+            footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws .footer-text {
+              width: calc(100% - 160px); }
+            /* line 327, login.scss */
+            footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws .footer-img {
+              width: 160px; }
+          /* line 331, login.scss */
+          footer .footer-content .footer-downloads .row > div .software-download.software-ib-api {
+            width: 30%; }
+            /* line 333, login.scss */
+            footer .footer-content .footer-downloads .row > div .software-download.software-ib-api .footer-text {
+              width: calc(100% - 160px); }
+            /* line 336, login.scss */
+            footer .footer-content .footer-downloads .row > div .software-download.software-ib-api .footer-img {
+              width: 160px; }
+    /* line 344, login.scss */
+    footer .footer-content .footer-links {
+      padding: 10px 0px; }
+      /* line 346, login.scss */
+      footer .footer-content .footer-links p {
+        margin: 0px;
+        font-weight: 300;
+        text-align: center; }
+      /* line 351, login.scss */
+      footer .footer-content .footer-links a, footer .footer-content .footer-links a:link, footer .footer-content .footer-links a:visited, footer .footer-content .footer-links a:hover, footer .footer-content .footer-links a:active, footer .footer-content .footer-links a:focus {
+        font-size: 0.6875rem;
+        color: #666666; }
+      /* line 355, login.scss */
+      footer .footer-content .footer-links a:hover {
+        color: #000000; }
+      /* line 358, login.scss */
+      footer .footer-content .footer-links span.pipe {
+        display: inline-block;
+        margin: 0px 18px 0px 10px;
+        width: 1px;
+        height: 10px;
+        background-color: #CCCCCC; }
+
+/* PAPER TRADING COLOR SWITCH ---------------------------------------------------------------------------------------------------- */
+/* line 372, login.scss */
+body.bg-red {
+  background: #B71B27 !important;
+  background: -moz-linear-gradient(top, #B71B27 0%, #000000 100%) !important;
+  background: -webkit-linear-gradient(top, #B71B27 0%, #000000 100%) !important;
+  background: linear-gradient(to bottom, #B71B27 0%, #000000 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$red-extra-dark', endColorstr='$black', GradientType=0 ) !important; }
+  /* line 378, login.scss */
+  body.bg-red section.login-page .container .login-container .ib-logo-white {
+    background: transparent url("/images/web/logos/ib-logo-text-white.svg") no-repeat 0px 0px !important; }
+  /* line 382, login.scss */
+  body.bg-red .login .btn-primary {
+    background-color: #E62333;
+    border-color: #E62333; }
+  /* line 386, login.scss */
+  body.bg-red .login h1 {
+    color: #E62333; }
+  /* line 389, login.scss */
+  body.bg-red .login p span.active {
+    color: #E62333; }
+  /* line 393, login.scss */
+  body.bg-red section.download-text p {
+    color: #FFFFFF;
+    opacity: 0.75; }
+
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width: 575.98px) {
+  /* LOGIN CONTAINER STYLES ---------------------------------------------------------------------------------------------------- */
+  /* line 405, login.scss */
+  section.login-page {
+    min-height: calc(100vh - 50px); }
+    /* line 407, login.scss */
+    section.login-page .container {
+      vertical-align: top;
+      padding: 0px; }
+      /* line 410, login.scss */
+      section.login-page .container .login-container {
+        padding: 20px 10px 10px 10px;
+        width: 100%; }
+        /* line 413, login.scss */
+        section.login-page .container .login-container .login {
+          padding: 20px; }
+      /* line 417, login.scss */
+      section.login-page .container .simulated-banner {
+        margin: -25px -20px 20px -20px;
+        width: initial; }
+
+  /* FOOTER ---------------------------------------------------------------------------------------------------- */
+  /* line 426, login.scss */
+  footer .footer-content .footer-downloads {
+    padding: 0px; }
+    /* line 429, login.scss */
+    footer .footer-content .footer-downloads .row > div {
+      display: block; }
+      /* line 431, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download {
+        float: none;
+        width: 100%;
+        padding: 20px 0px;
+        border-right: none;
+        border-bottom: 1px solid #D7D7D7; }
+        /* line 192, ../web/ibkr-foundation.scss */
+        footer .footer-content .footer-downloads .row > div .software-download::after {
+          display: block;
+          content: "";
+          clear: both; }
+        /* line 438, login.scss */
+        footer .footer-content .footer-downloads .row > div .software-download:last-child {
+          border-bottom: none; }
+        /* line 442, login.scss */
+        footer .footer-content .footer-downloads .row > div .software-download .footer-text p {
+          text-align: left; }
+        /* line 446, login.scss */
+        footer .footer-content .footer-downloads .row > div .software-download .footer-img {
+          text-align: right; }
+        /* line 449, login.scss */
+        footer .footer-content .footer-downloads .row > div .software-download.software-ibkr {
+          width: 100%; }
+          /* line 451, login.scss */
+          footer .footer-content .footer-downloads .row > div .software-download.software-ibkr .footer-text {
+            width: 100%; }
+          /* line 454, login.scss */
+          footer .footer-content .footer-downloads .row > div .software-download.software-ibkr .footer-img {
+            width: 100%; }
+        /* line 458, login.scss */
+        footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws {
+          width: 100%; }
+          /* line 460, login.scss */
+          footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws .footer-text {
+            width: 100%; }
+          /* line 463, login.scss */
+          footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws .footer-img {
+            width: 100%; }
+        /* line 467, login.scss */
+        footer .footer-content .footer-downloads .row > div .software-download.software-ib-api {
+          width: 100%; }
+          /* line 469, login.scss */
+          footer .footer-content .footer-downloads .row > div .software-download.software-ib-api .footer-text {
+            width: 100%; }
+          /* line 472, login.scss */
+          footer .footer-content .footer-downloads .row > div .software-download.software-ib-api .footer-img {
+            width: 100%; } }
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* LOGIN CONTAINER STYLES ---------------------------------------------------------------------------------------------------- */
+  /* line 489, login.scss */
+  section.login-page {
+    min-height: calc(100vh - 50px); }
+
+  /* FOOTER ---------------------------------------------------------------------------------------------------- */
+  /* line 498, login.scss */
+  footer .footer-content .footer-downloads .row > div .software-download {
+    flex-direction: column; }
+    /* line 501, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download .footer-text p {
+      text-align: center; }
+    /* line 505, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download .footer-img {
+      margin-top: 10px;
+      text-align: center; }
+    /* line 509, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download.software-ibkr {
+      width: 40%; }
+      /* line 511, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-ibkr .footer-text {
+        width: 100%; }
+      /* line 514, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-ibkr .footer-img {
+        width: 100%; }
+    /* line 518, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws {
+      width: 30%; }
+      /* line 520, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws .footer-text {
+        width: 100%; }
+      /* line 523, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws .footer-img {
+        width: 100%; }
+    /* line 527, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download.software-ib-api {
+      width: 30%; }
+      /* line 529, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-ib-api .footer-text {
+        width: 100%; }
+      /* line 532, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-ib-api .footer-img {
+        width: 100%; } }
+/* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* LOGIN CONTAINER STYLES ---------------------------------------------------------------------------------------------------- */
+  /* line 549, login.scss */
+  section.login-page {
+    min-height: calc(100vh - 220px); }
+
+  /* FOOTER ---------------------------------------------------------------------------------------------------- */
+  /* line 558, login.scss */
+  footer .footer-content .footer-downloads .row > div .software-download {
+    flex-direction: column; }
+    /* line 561, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download .footer-text p {
+      text-align: center; }
+    /* line 565, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download .footer-img {
+      margin-top: 10px;
+      text-align: center; }
+    /* line 569, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download.software-ibkr {
+      width: 40%; }
+      /* line 571, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-ibkr .footer-text {
+        width: 100%; }
+      /* line 574, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-ibkr .footer-img {
+        width: 100%; }
+    /* line 578, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws {
+      width: 30%; }
+      /* line 580, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws .footer-text {
+        width: 100%; }
+      /* line 583, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws .footer-img {
+        width: 100%; }
+    /* line 587, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download.software-ib-api {
+      width: 30%; }
+      /* line 589, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-ib-api .footer-text {
+        width: 100%; }
+      /* line 592, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-ib-api .footer-img {
+        width: 100%; } }
+/* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* LOGIN CONTAINER STYLES ---------------------------------------------------------------------------------------------------- */
+  /* line 609, login.scss */
+  section.login-page {
+    min-height: calc(100vh - 220px); }
+
+  /* FOOTER ---------------------------------------------------------------------------------------------------- */
+  /* line 618, login.scss */
+  footer .footer-content .footer-downloads .row > div .software-download {
+    flex-direction: column; }
+    /* line 621, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download .footer-text p {
+      text-align: center; }
+    /* line 625, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download .footer-img {
+      margin-top: 10px;
+      text-align: center; }
+    /* line 629, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download.software-ibkr {
+      width: 40%; }
+      /* line 631, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-ibkr .footer-text {
+        width: 100%; }
+      /* line 634, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-ibkr .footer-img {
+        width: 100%; }
+    /* line 638, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws {
+      width: 30%; }
+      /* line 640, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws .footer-text {
+        width: 100%; }
+      /* line 643, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-desktop-tws .footer-img {
+        width: 100%; }
+    /* line 647, login.scss */
+    footer .footer-content .footer-downloads .row > div .software-download.software-ib-api {
+      width: 30%; }
+      /* line 649, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-ib-api .footer-text {
+        width: 100%; }
+      /* line 652, login.scss */
+      footer .footer-content .footer-downloads .row > div .software-download.software-ib-api .footer-img {
+        width: 100%; } }
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+
+/*# sourceMappingURL=login.css.map */

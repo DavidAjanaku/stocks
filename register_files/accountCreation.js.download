@@ -1,0 +1,188 @@
+function legalCountryWarningDriver() {
+    var primaryCountry = $("input[name='differentColr']:checked").val() === "T" ? $("#countryLegalResidence").val() : $("#countryResidentialResidence").val();
+    if (primaryCountry == "") {
+        $("#legalCountryWarningLocation").html("");
+        return;
+    }
+    var secondaryCountry = $("input[name='differentColr']:checked").val() === "T" ? $("#countryResidentialResidence").val() : "";
+
+    var params = new Object();
+    params.action = "utility";
+    params.cmd = "legalCountryWarning";
+    params.primaryCountry = primaryCountry;
+    params.secondaryCountry = secondaryCountry;
+    $.ajax({
+        type : "POST",
+        url : getApplicationMainURL(),
+        data : params,
+        success : function(data, textStatus, jqXHR) {
+            $("#legalCountryWarningLocation").html(data);
+            $("#legalCountryWarningLocation").initToggle();
+            $("#legalCountryWarningLocation").initIChecks();
+            initHelpHotSpots();
+        }
+    });
+}
+
+function differentColrDriver() {
+    if ($("input[name='differentColr']:checked").val() === "T") {
+        $("#countryLegalResidence").prop("disabled", false);
+        $("#countryLegalResidenceBlock").show();
+    } else {
+        $("#countryLegalResidenceBlock").hide();
+        $("#countryLegalResidence").val("");
+        $("#countryLegalResidence").prop("disabled", true);
+    }
+
+    legalCountryWarningDriver();
+
+    if ($("#nriInformation").length) {
+        nriDriver();
+    }
+
+    $("#countryLegalResidence").initChosen();
+}
+
+function nriDriver() {
+    var countryToUse = $("input[name='differentColr']:checked").val() === "T" ? $("#countryLegalResidence").val() : $("#countryResidentialResidence").val();
+    switch (countryToUse) {
+        case "":
+        case "Canada":
+        case "India":
+        case "Japan":
+            $("#nonResidentIndian").iCheck("uncheck").iCheck("update");
+            $("#nonResidentIndian").iCheck("disable");
+            break;
+        default:
+            $("#nonResidentIndian").iCheck("enable");
+            break;
+    }
+}
+
+var validateResidentialCountry = function() {
+    var error = false;
+
+    // Check if Residential Country is provided
+    var selectElement = $("#countryResidentialResidence").filterEnhancedSelect();
+    selectElement.nextAll().remove();
+    if ($("#countryResidentialResidence").val() == "") {
+        selectElement.after("<div class='alert alert-danger'><p>" + globals.staticTextMap['#basicRequired'][globals.currentLanguage] + "</p></div>");
+        error = true;
+    } else if ($("#countryResidentialResidence").val() == "other") {
+        if ($("#ibkrProLink").length) {
+            $("#ibkrProLink").removeClass("alert-warning").addClass("alert-danger");
+        }
+        error = true;
+    }
+
+    if (!error) {
+        $("#countryResidentialResidence").closest(".form-group").removeClass("has-error").addClass("has-success");
+    } else {
+        $("#countryResidentialResidence").closest(".form-group").removeClass("has-success").addClass("has-error");
+    }
+    return error;
+}
+
+var validateLegalCountry = function() {
+    var error = false;
+
+    // Check if Legal Country is provided
+    var selectElement = $("#countryLegalResidence").filterEnhancedSelect();
+    selectElement.nextAll().remove();
+    if ($("input[name='differentColr']:checked").val() === "T" && $("#countryLegalResidence").val() == "") {
+        selectElement.after("<div class='alert alert-danger'><p>" + globals.staticTextMap['#basicRequired'][globals.currentLanguage] + "</p></div>");
+        error = true;
+    } else if ($("#countryLegalResidence").val() == "other") {
+        if ($("#ibkrProLink").length) {
+            $("#ibkrProLink").removeClass("alert-warning").addClass("alert-danger");
+        }
+        error = true;
+    }
+
+    if ($("#countryLegalResidenceBlock").is(":visible")) {
+        if (!error) {
+            $("#countryLegalResidence").closest(".form-group").removeClass("has-error").addClass("has-success");
+        } else {
+            $("#countryLegalResidence").closest(".form-group").removeClass("has-success").addClass("has-error");
+        }
+    }
+    return error;
+}
+
+var validateLegalCountryWarning = function() {
+    var error = false;
+
+    // Check if Legal Country Warning was not Accepted
+    if ($("#countryLegalResidenceAck").length) {
+        var alertContainer = $("#countryLegalResidenceAck").parents("div.alert:first");
+
+        alertContainer.removeClass("alert-danger").removeClass("alert-warning");
+        if ($("input[name='countryLegalResidenceAck']:checked").val() !== "T") {
+            alertContainer.addClass("alert-danger");
+            error = true;
+        } else {
+            alertContainer.addClass("alert-warning");
+        }
+    }
+    return error;
+}
+
+var validateGdprAnswer = function() {
+    var error = false;
+
+    $("#gdprQuestion").find(".alert.alert-danger:visible").remove();
+    if ($("input[name='gdprConfigProductUpdates']").length && !$("input[name='gdprConfigProductUpdates']:checked").val()) {
+        $("#gdprQuestion").append("<div class='alert alert-danger mb-0 mt-1'><p>" + globals.staticTextMap['#basicRequired'][globals.currentLanguage] + "</p></div>");
+        error = true;
+    }
+    return error;
+}
+
+var validateBrokerageAccountAnswers = function() {
+    var error = false;
+    if ($("input[name='demoBetHasBrokerageAccountAnswer']").length && !$("input[name='demoBetHasBrokerageAccountAnswer']:checked").val()) {
+        $("#brokerageAccountQuestionForDemoBet").parent().addClass("has-error");
+        $("#brokerageAccountQuestionForDemoBet").append("<div class='alert alert-danger mb-0 mt-1'><p>" + globals.staticTextMap['#basicRequired'][globals.currentLanguage] + "</p></div>");
+        error = true;
+    }
+    return error;
+}
+
+var validateDemoBettingAccountAnswers = function() {
+    var error = false;
+    if ($("input[name='demoBetHasBetAccountAnswer']").length) {
+        if (!$("input[name='demoBetHasBetAccountAnswer']:checked").val()) {
+            $("#demoBettingAccountQuestionForDemoBet").parent().addClass("has-error");
+            $("#demoBettingAccountQuestionForDemoBet").append("<div class='alert alert-danger mb-0 mt-1'><p>" + globals.staticTextMap['#basicRequired'][globals.currentLanguage] + "</p></div>");
+            error = true;
+        } else if ($("input[name='demoBetHasBetAccountAnswer']:checked").val() !== "F") {
+            error = true;
+        }
+    }
+    return error;
+}
+
+// TODO - Still needed?
+function redirectToBrokerage() {
+    if (confirm('You are about to be redirected to Interactive Brokers where you will be asked to login so we can prefill your information.')) {
+        // for opening url in same window
+        window.location = 'https://www.interactivebrokers.com/sso/Login?action=UpgradeToBetting';
+
+        // for opening url in new tab
+        // window.open('https://www.interactivebrokers.com' , 'IB_WEB');
+    } else {
+        $("input[name='brokerageAccountAnswer']").attr("checked", false);
+    }
+}
+
+function getMaintenanceMessage() {
+    $("#maintenanceWarningSection").hide();
+
+    var data = getGStatBulletin();
+    if (typeof data != "undefined") {
+        $("#maintenanceWarningSection").show();
+        $("#maintenanceWarningSection").html(data);
+    }
+}
+
+//# sourceURL=accountCreation.js

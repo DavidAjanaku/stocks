@@ -1,0 +1,218 @@
+.login .btn-default {
+  text-transform: none;
+  color: #4D6E9D;
+}
+.otp-opener-text {
+  cursor: pointer;
+  text-align: right;
+  font-size: 12px;
+  color: #999999;
+  display: none;
+}
+.message {
+  border: 1px solid #d5d50b;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #ffffc3;
+}
+.otp-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.otp-buttons-reverse {
+  flex-direction: row-reverse;
+}
+.login .otp-buttons .btn-primary {
+  margin: initial;
+  width: initial;
+}
+.otp-buttons.twobuttons .otp-button {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.otp-buttons.threebuttons .otp-button {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.otp-buttons.otp-buttons-reverse button.btn,
+.otp-buttons.otp-buttons-reverse button.btn + button.btn {
+  margin: 0 5px;
+}
+.login-step-notification {
+	font-family: 'Source Sans Pro';
+}
+.login-step-notification .notificationImg {
+	width: 224px;
+	display: block;
+	margin: 35px auto 26px;
+}
+.login-step-notification h2 {
+	font-size: 21px;
+	text-align: center;
+	margin-bottom: 13px;
+}
+div.login-step-notification p {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.login-step-notification strong {
+	color: #0B56BF;
+}
+.login-step-notification a {
+	font-size: 14px;
+}
+.login-step-notification .notifLinks {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+.login-step-notification .notifLinksRight a {
+	color: black;
+}
+.login-step-notification .notifResent {
+	font-size: 16px;
+	color: #000;
+	margin-top: 20px;
+	display: none;
+}
+.login-step-notification .sep {
+	border-bottom: 1px solid #e7e7e7;
+	margin: 30px 0 15px;
+}
+.login-step-notification .link-label {
+	font-size: 14px;
+	margin: 0 0 5px;
+	color: #000;
+}
+.login-step-notification .notifLinks ul {
+	padding-left: 7px;
+	list-style-type: none;
+}
+.login-step-notification .notifLinks li {
+	font-size: 14px;
+	line-height: 1.5;
+	position: relative;
+}
+.login-step-notification .notifLinks li:before {
+	display: block;
+	content: '.';
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: -6px;
+	left: -8px;
+	font-size: 18px;
+	font-weight: 900;
+	color: #0b56bf;
+}
+
+.login-step-challenge {
+	font-family: 'Source Sans Pro';
+}
+.login-step-challenge h2 {
+	font-size: 18px;
+	text-align: center;
+	line-height: 22px;
+	margin-top: 58px;
+	margin-bottom: 13px;
+}
+div.login-step-challenge p {
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.login-step-challenge a {
+	color: black;
+	text-decoration: underline;
+}
+
+.chlgtext_SWCR > span {
+	display: block;
+	font-size: 36px;
+	margin: 0 auto;
+}
+
+section.login-page .container .login-container .login.login-ibkey-promo {
+	padding: 20px;
+}
+
+section.login-page .ibkey-promo-main p {
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+section.login-page .ibkey-promo-main p.qr-sid {
+	margin: 10px -10px;
+}
+.ibkey-promo-main h2 {
+	font-size: 18px;
+	font-weight: 600;
+	margin-top: 23px;
+}
+.ibkey-promo-main a.help {
+	font-size: 14px;
+	font-weight: 600;
+}
+.ibkey-promo-main .qr-wrapper {
+	text-align: center;
+	width: 100%;
+	color: #e5e5e5;
+}
+.ibkey-promo-main .scan-code {
+	padding-left: 10px;
+}
+.ibkey-promo-main .scan-code:before {
+	display: inline-block;
+	content: " ";
+	width: 20px;
+	height: 18px;
+	background: url("../images/camera-qr.svg") no-repeat 0 0;
+	margin-right: 5px;
+	margin-left: -14px;
+	vertical-align: middle;
+}
+.ibkey-promo-footer {
+	text-align: center;
+}
+.ibkey-promo-footer::before {
+	content: " ";
+	display: block;
+	width: 500px;
+	height: 2px;
+	background-color: #e5e5e5;
+	margin: 0 -5px;
+}
+section.login-page .ibkey-promo-footer p {
+	font-size: 16px;
+	margin: 0;
+}
+section.login-page .ibkey-promo-footer p.skip-link {
+	display: none;
+}
+section.login-page .ibkey-promo-footer p.mute-switch {
+	display: none;
+}
+section.login-page .ibkey-promo-footer p.mute-switch label {
+	padding: 10px 10px 0;
+	margin: 0;
+}
+section.login-page .ibkey-promo-footer input.mute {
+	margin-right: 5px;
+	vertical-align: middle;
+}
+.ibkey-promo-footer a.ibkey-promo-skip {
+	font-size: 16px;
+	padding: 20px 0 0;
+	display: block;
+}
+.ibkey-promo-footer p.skip-link-disabled {
+	font-size: 16px;
+	padding: 20px 0 0;
+	display: block;
+}
+section.login-page p.chlgtext_SWCR {
+	text-align: center;
+}
+.form-group-sendagain {
+	margin-bottom: 20px;
+}
