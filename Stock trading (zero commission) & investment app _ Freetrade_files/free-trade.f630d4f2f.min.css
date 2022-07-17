@@ -10781,9 +10781,10 @@ strong {
   font-size: 15px;
   line-height: 24px;
   font-weight: 500;
+  color: #fff;
 }
 .slider-text.pink {
-  color: #e24c76;
+  color: #fff;
 }
 .slide-content-wrapper {
   display: -webkit-box;
@@ -12327,7 +12328,7 @@ strong {
 .section-38 {
   padding-top: 0;
   padding-bottom: 0;
-  background-color: #f7efe8;
+  background-color: #3a68f2;
 }
 .trust-card-2 {
   width: 24%;
