@@ -2596,7 +2596,7 @@ strong {
   padding-top: 120px;
   padding-bottom: 80px;
   background-color: #340335;
-  color: #3a68f2;
+  color: F;
 }
 .div-footer-logo {
   margin-bottom: 60px;
@@ -13989,6 +13989,7 @@ strong {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #340335;
+  margin-top: 657px;
 }
 .h3-plus {
   font-family: "Modern era";
