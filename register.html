@@ -111,6 +111,15 @@ body {
   visibility: visible;
 }
 
+.sign-up-link {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.sign-up-link a{
+  text-decoration: none;
+  color: rgb(72, 13, 180);
+}
 .form button {
   background-color: #3a68f2;
   border: 2px solid #3a68f2;
@@ -312,6 +321,13 @@ body {
             <small>Error message</small>
           </div>
           <div class="form-control">
+            <label for="username">Last Name</label>
+            <input type="text" placeholder="" id="email" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
             <label for="username">Password</label>
             <input type="password" placeholder="" id="password" />
             <i class="fas fa-check-circle"></i>
@@ -324,6 +340,11 @@ body {
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
+          </div>
+
+          <div class="group sign-up-link">
+      
+            <p>Already a user? <a href="login.html">Login</a></p>
           </div>
           <button>Submit</button>
         </form>
