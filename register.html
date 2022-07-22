@@ -1,441 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
 </head>
 <body>
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap");
 
-* {
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
 }
 
 body {
-  /* background-color: #0f0f0f;  */
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+a {
+  color: #2196f3;
+  text-decoration: none;
+}
+.container {
+  display: grid;
+  grid-template-rows: minmax(min-content, 100vh);
+  grid-template-columns: repeat(2, 50vw);
+}
+.custom-dot {
+  color: #2196f3;
+}
+.signup-container,
+.signup-form {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin: 0;
+  flex-direction: column;
+  gap: 2rem;
+}
+.signup-container {
+  width: 100vw;
+  padding: 10rem 10rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+.signup-form {
+  max-width: 45rem;
+  width: 100%;
+}
+.text-mute {
+  color: #aaa;
+}
+.heading-primary {
+  font-size: 5rem;
+}
+.input-text {
+  font-family: inherit;
+  font-size: 1.8rem;
+  padding: 3rem 5rem 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  background: #eee;
+  font-weight: 600;
+  width: 100%;
+}
+.input-text:focus {
+  outline-color: #2196f3;
+}
+
+.btn {
+  padding: 2rem 3rem;
+  border: none;
+  background: #3a68f2;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+}
+.btn-signup {
+  align-self: flex-end;
+  width: 100%;
+  margin-top: 2rem;
+  box-shadow: 0 1rem 2rem #00000025;
+}
+.btn-signup:active {
+  box-shadow: none;
+}
+.btn-signup:hover {
+  background: #2180f9;
+}
+.inp {
+  position: relative;
+}
+.label {
+  pointer-events: none;
+
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: #00000070;
+  font-weight: 500;
+  font-size: 1.8rem;
+
+  transition: all 0.2s;
+  transform-origin: left;
+}
+.input-text:not(:placeholder-shown) + .label,
+.input-text:focus + .label {
+  top: 0.7rem;
+  transform: scale(0.75);
+}
+.input-text:focus + .label {
+  color: #2196f3;
+}
+.f-row {
+  display: flex;
+  gap: 2rem;
+}
+.input-icon {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: #00000070;
+}
+.input-icon-password {
+  cursor: pointer;
 }
 
 .container {
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  width: 400px;
-  max-width: 100%;
+  display: flex;
+}
+.heading-secondary {
+  font-size: 3rem;
 }
 
-.header {
-  border-bottom: 1px solid #f0f0f0;
-  background-color: #f7f7f7;
-  padding: 20px 40px;
-}
-
-.header h2 {
-  margin: 0;
-}
-
-.form {
-  padding: 30px 40px;
-}
-
-.form-control {
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-  position: relative;
-}
-
-.form-control label {
-  display: inline-block;
-  margin-bottom: 5px;
-}
-
-.form-control input {
-  border: 2px solid #f0f0f0;
-  border-radius: 4px;
-  display: block;
-  font-family: inherit;
-  font-size: 14px;
-  padding: 10px;
-  width: 100%;
-}
-
-.form-control input:focus {
-  outline: 0;
-  border-color: #777;
-}
-
-.form-control.success input {
-  border-color: #2ecc71;
-}
-
-.form-control.error input {
-  border-color: #e74c3c;
-}
-
-.form-control i {
-  visibility: hidden;
-  position: absolute;
-  top: 40px;
-  right: 10px;
-}
-
-.form-control.success i.fa-check-circle {
-  color: #2ecc71;
-  visibility: visible;
-}
-
-.form-control.error i.fa-exclamation-circle {
-  color: #e74c3c;
-  visibility: visible;
-}
-
-.form-control small {
-  color: #e74c3c;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-}
-
-.form-control.error small {
-  visibility: visible;
-}
-
-.sign-up-link {
-  text-align: center;
-  padding-bottom: 10px;
-}
-
-.sign-up-link a{
-  text-decoration: none;
-  color: rgb(72, 13, 180);
-}
-.form button {
-  background-color: #3a68f2;
-  border: 2px solid #3a68f2;
-  border-radius: 4px;
-  color: #fff;
-  display: block;
-  font-family: inherit;
-  font-size: 16px;
-  padding: 10px;
-  margin-top: 20px;
-  width: 100%;
-}
-
-/* SOCIAL PANEL CSS */
-.social-panel-container {
-  position: fixed;
-  right: 0;
-  bottom: 80px;
-  transform: translateX(100%);
-  transition: transform 0.4s ease-in-out;
-}
-
-.social-panel-container.visible {
-  transform: translateX(-10px);
-}
-
-.social-panel {
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 16px 31px -17px rgba(0, 31, 97, 0.6);
-  border: 5px solid #001f61;
+.welcome-container {
+  background: #eeeeee75;
+  grid-column: 2 / 3;
+  grid-row: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  font-family: "Muli";
-  position: relative;
-  height: 169px;
-  width: 370px;
-  max-width: calc(100% - 10px);
+  align-items: flex-start;
+  padding: 10rem;
+}
+.lg {
+  font-size: 6rem;
+}
+.welcome-container img {
+  width: 100%;
 }
 
-.social-panel button.close-btn {
-  border: 0;
-  color: #97a5ce;
-  cursor: pointer;
-  font-size: 20px;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-}
-
-.social-panel button.close-btn:focus {
-  outline: none;
-}
-
-.social-panel p {
-  background-color: #001f61;
-  border-radius: 0 0 10px 10px;
-  color: #fff;
-  font-size: 14px;
-  line-height: 18px;
-  padding: 2px 17px 6px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin: 0;
-  transform: translateX(-50%);
-  text-align: center;
-  width: 235px;
-}
-
-.social-panel p i {
-  margin: 0 5px;
-}
-
-.social-panel p a {
-  color: #ff7500;
-  text-decoration: none;
-}
-
-.social-panel h4 {
-  margin: 20px 0;
-  color: #97a5ce;
-  font-family: "Muli";
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-}
-
-.social-panel ul {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.social-panel ul li {
-  margin: 0 10px;
-}
-
-.social-panel ul li a {
-  border: 1px solid #dce1f2;
-  border-radius: 50%;
-  color: #001f61;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 50px;
-  text-decoration: none;
-}
-
-.social-panel ul li a:hover {
-  border-color: #ff6a00;
-  box-shadow: 0 9px 12px -9px #ff6a00;
-}
-
-.floating-btn {
-  border-radius: 26.5px;
-  background-color: #001f61;
-  border: 1px solid #001f61;
-  box-shadow: 0 16px 22px -17px #03153b;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
-  padding: 12px 20px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-}
-
-.floating-btn:hover {
-  background-color: #ffffff;
-  color: #001f61;
-}
-
-.floating-btn:focus {
-  outline: none;
-}
-
-.floating-text {
-  background-color: #001f61;
-  border-radius: 10px 10px 0 0;
-  color: #fff;
-  font-family: "Muli";
-  padding: 7px 15px;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  z-index: 998;
-}
-
-.floating-text a {
-  color: #ff7500;
-  text-decoration: none;
-}
-
-@media screen and (max-width: 480px) {
-  .social-panel-container.visible {
-    transform: translateX(0px);
-  }
-
-  .floating-btn {
-    right: 10px;
+@media only screen and (max-width: 70rem) {
+  html {
+    font-size: 54.5%;
   }
 }
 
-    </style>
-    <div class="container">
-        <div class="header">
-          <h2>Create Account</h2>
+@media only screen and (max-width: 60rem) {
+  .signup-container {
+    padding: 5rem;
+  }
+}
+@media only screen and (max-width: 40rem) {
+  html {
+    font-size: 48.5%;
+  }
+
+  .input-text:not(:placeholder-shown) + .label,
+  .input-text:focus + .label {
+    top: 0.6rem;
+    transform: scale(0.75);
+  }
+  .label {
+    font-size: 1.9rem;
+  }
+  .input-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .signup-container {
+    grid-column: 1 / 3;
+  }
+  .welcome-container {
+    display: none;
+  }
+}
+
+  </style>
+  <div class="container">
+    <main class="signup-container">
+      <h1 class="heading-primary">Create new account<span class="custom-dot">.</span></h1>
+      <p class="text-mute">Already A Member? <a href="login.html">Log in</a></p>
+      <form class="signup-form">
+        <div class="f-row input-wrapper">
+          
+          <label class="inp">
+            <input type="text" class="input-text" placeholder="&nbsp;">
+            <span class="label">First name</span>
+            <span class="input-icon"><i class="fa-solid fa-address-card"></i></span>
+          </label>
+          <label class="inp">
+            <input type="text" class="input-text" placeholder="&nbsp;">
+            <span class="label">Last name</span>
+            <span class="input-icon"><i class="fa-solid fa-address-card"></i></span>
+          </label>
         </div>
-        <form id="form" class="form">
-          <div class="form-control">
-            <label for="username">Username</label>
-            <input type="text" placeholder="" id="username" />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="username">Email</label>
-            <input type="email" placeholder="" id="email" />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="username">First Name</label>
-            <input type="text" placeholder="" id="email" />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="username">Last Name</label>
-            <input type="text" placeholder="" id="email" />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="username">Password</label>
-            <input type="password" placeholder="" id="password" />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="username">Confirm Password</label>
-            <input type="password" placeholder="" id="password2" />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-          </div>
+        <label class="inp">
+          <input type="username" class="input-text" placeholder="&nbsp;">
+          <span class="label">Username</span>
+          <span class="input-icon"><i class="fa-solid fa-envelope"></i></span>
+        </label>
+        <label class="inp">
+          <input type="email" class="input-text" placeholder="&nbsp;">
+          <span class="label">Email</span>
+          <span class="input-icon"><i class="fa-solid fa-envelope"></i></span>
+        </label>
+        <label class="inp">
+          <input type="password" class="input-text" placeholder="&nbsp;" id="password">
+          <span class="label">Password</span>
+          <span class="input-icon input-icon-password" data-password><i class="fa-solid fa-eye"></i></span>
+        </label>
+        <label class="inp">
+          <input type="password" class="input-text" placeholder="&nbsp;" id="password">
+          <span class="label">Confirm Password</span>
+          <span class="input-icon input-icon-password" data-pas\sword><i class="fa-solid fa-eye"></i></span>
+        </label>
+        <button class="btn btn-signup">Create account</button>
+      </form>
+    </main>
+    <div class="welcome-container">
+      <img src="Stock trading (zero commission) & investment app _ Freetrade_files/5f7ed20812f8baf9b3eaac9d_discover-in-app-screen.png" alt="">
+    </div>
+  </div>
 
-          <div class="group sign-up-link">
-      
-            <p>Already a user? <a href="login.html">Login</a></p>
-          </div>
-          <button>Submit</button>
-        </form>
-      </div>
-      
-   
+  <script>
+    const eyeClick = document.querySelector("[data-password]");
+const password_elem = document.getElementById("password");
 
-
-
-      <script>
-        const form = document.getElementById("form");
-const username = document.getElementById("username");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const password2 = document.getElementById("password2");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  checkInputs();
-});
-
-function checkInputs() {
-  // trim to remove the whitespaces
-  const usernameValue = username.value.trim();
-  const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
-  const password2Value = password2.value.trim();
-
-  if (usernameValue === "") {
-    setErrorFor(username, "Username cannot be blank");
-  } else {
-    setSuccessFor(username);
+eyeClick.onclick = () => {
+  const icon = eyeClick.children[0];
+  icon.classList.toggle("fa-eye-slash");
+  if (password_elem.type === "password") {
+    password_elem.type = "text";
+  } else if (password_elem.type === "text") {
+    password_elem.type = "password";
   }
+};
 
-  if (emailValue === "") {
-    setErrorFor(email, "Email cannot be blank");
-  } else if (!isEmail(emailValue)) {
-    setErrorFor(email, "Not a valid email");
-  } else {
-    setSuccessFor(email);
-  }
-
-  if (passwordValue === "") {
-    setErrorFor(password, "Password cannot be blank");
-  } else {
-    setSuccessFor(password);
-  }
-
-  if (password2Value === "") {
-    setErrorFor(password2, "Password2 cannot be blank");
-  } else if (passwordValue !== password2Value) {
-    setErrorFor(password2, "Passwords does not match");
-  } else {
-    setSuccessFor(password2);
-  }
-}
-
-function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector("small");
-  formControl.className = "form-control error";
-  small.innerText = message;
-}
-
-function setSuccessFor(input) {
-  const formControl = input.parentElement;
-  formControl.className = "form-control success";
-}
-
-function isEmail(email) {
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-    email
-  );
-}
-
-// SOCIAL PANEL JS
-const floating_btn = document.querySelector(".floating-btn");
-const close_btn = document.querySelector(".close-btn");
-const social_panel_container = document.querySelector(
-  ".social-panel-container"
-);
-
-floating_btn.addEventListener("click", () => {
-  social_panel_container.classList.toggle("visible");
-});
-
-close_btn.addEventListener("click", () => {
-  social_panel_container.classList.remove("visible");
-});
-
-      </script>
+  </script>
 </body>
 </html>
